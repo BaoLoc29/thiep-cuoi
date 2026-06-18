@@ -1,23 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Hero from "./components/Hero";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-gray-200 flex items-center justify-center">
+      {/* Khung 9:16 */}
+      <div className="w-full max-w-[430px] aspect-[9/16] bg-white shadow-2xl overflow-hidden">
+        <Hero />
+      </div>
     </div>
   );
 }
