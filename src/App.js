@@ -3,9 +3,8 @@ import Hero from "./components/Hero";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-200 flex items-center justify-center">
-      {/* Khung 9:16 */}
-      <div className="w-full max-w-[430px] aspect-[9/16] bg-white shadow-2xl overflow-hidden">
+    <div className="min-h-screen">
+      <div className="w-full overflow-hidden">
         <Hero />
       </div>
     </div>

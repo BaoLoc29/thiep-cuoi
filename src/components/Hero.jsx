@@ -1,21 +1,40 @@
 import React from "react";
-import HeroImage from "../assets/DSC_4595.JPG";
+import DSC_1 from "../assets/DSC_1.png";
+import DSC_2 from "../assets/DSC_2.png";
+import DSC_3 from "../assets/DSC_3.png";
 
 function Hero() {
   return (
-    <section className="relative w-full h-full bg-[#F5F5EE] flex flex-col items-center justify-center overflow-hidden">
-      <img src={HeroImage} alt="anh" className="w-full h-1/2" />
-      <div className="absolute inset-0 flex flex-col">
-        <p className="text-xl tracking-[6px] text-center font-serif mt-10">
-          Thư Mời Cưới
-        </p>
+    <section className="w-full">
+      {/* Khối chứa banner và ảnh */}
+      <div className="relative">
+        {/* Banner */}
+        <div className="w-full h-44 bg-gray-300"></div>
 
-        <h1 className="text-6xl text-center font-amsterdam">
-          Bảo Lộc & Thị Thel
-        </h1>
+        {/* 3 ảnh */}
+        <div className="absolute left-1/2 bottom-0 flex -translate-x-1/2 translate-y-1/2 gap-5">
+          <img
+            src={DSC_1}
+            alt="anh"
+            className="w-40 rounded-2xl border-4 border-green-700 shadow-lg"
+          />
 
-        <p className="text-3xl text-center font-mono">02.09.2026</p>
+          <img
+            src={DSC_2}
+            alt="anh"
+            className="w-40 rounded-2xl border-4 border-green-700 shadow-lg"
+          />
+
+          <img
+            src={DSC_3}
+            alt="anh"
+            className="w-40 rounded-2xl border-4 border-green-700 shadow-lg"
+          />
+        </div>
       </div>
+
+      {/* Chừa khoảng trống vì ảnh đang absolute */}
+      <div className="h-28"></div>
     </section>
   );
 }
