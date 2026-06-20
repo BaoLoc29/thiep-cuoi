@@ -1,40 +1,32 @@
 import React from "react";
-import DSC_1 from "../assets/DSC_1.png";
-import DSC_2 from "../assets/DSC_2.png";
-import DSC_3 from "../assets/DSC_3.png";
+import DSC_1 from "../assets/images/DSC_1.png";
 
 function Hero() {
   return (
     <section className="w-full">
-      {/* Khối chứa banner và ảnh */}
+      {/* Banner */}
       <div className="relative">
-        {/* Banner */}
-        <div className="w-full h-44 bg-gray-300"></div>
+        <div className="h-28 w-full bg-gray-300 md:h-44 lg:h-60"></div>
 
         {/* 3 ảnh */}
-        <div className="absolute left-1/2 bottom-0 flex -translate-x-1/2 translate-y-1/2 gap-5">
-          <img
-            src={DSC_1}
-            alt="anh"
-            className="w-40 rounded-2xl border-4 border-green-700 shadow-lg"
-          />
+        <div className="absolute bottom-0 left-1/2 flex -translate-x-1/2 translate-y-1/2 gap-2 md:gap-4 lg:gap-6">
+          <div className="overflow-hidden rounded-xl border-2 border-green-700 shadow-lg md:rounded-2xl md:border-4">
+            <img src={DSC_1} alt="anh" className="w-20 md:w-32 lg:w-44" />
+          </div>
 
-          <img
-            src={DSC_2}
-            alt="anh"
-            className="w-40 rounded-2xl border-4 border-green-700 shadow-lg"
-          />
+          <div className="overflow-hidden rounded-xl border-2 border-green-700 shadow-lg md:rounded-2xl md:border-4">
+            <img src={DSC_1} alt="anh" className="w-20 md:w-32 lg:w-44" />
+          </div>
 
-          <img
-            src={DSC_3}
-            alt="anh"
-            className="w-40 rounded-2xl border-4 border-green-700 shadow-lg"
-          />
+          <div className="overflow-hidden rounded-xl border-2 border-green-700 shadow-lg md:rounded-2xl md:border-4">
+            <img src={DSC_1} alt="anh" className="w-20 md:w-32 lg:w-44" />
+          </div>
         </div>
       </div>
 
-      {/* Chừa khoảng trống vì ảnh đang absolute */}
-      <div className="h-28"></div>
+      {/* Khoảng trống */}
+      <div className="h-16 md:h-24 lg:h-32 "></div>
+      {/* Phần tiếp theo trong thiệp cưới - tạo file component mới */}
     </section>
   );
 }
