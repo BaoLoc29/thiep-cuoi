@@ -1,5 +1,6 @@
 import Hero from "./components/Hero";
 import Main from "./components/Main";
+import TimeLine from "./components/TimeLine";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <div className="w-[420px] aspect-[9/16] bg-white shadow-2xl">
         <Hero />
         <Main />
+        <TimeLine />
       </div>
     </div>
   );
