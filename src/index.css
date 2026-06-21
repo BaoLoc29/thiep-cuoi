@@ -5,6 +5,26 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Pinyon Script";
+  src: url("./assets/fonts/PinyonScript-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "UTM-Cafeta";
+  src: url("./assets/fonts/UTM-Cafeta.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CormorantUpright-SemiBold";
+  src: url("./assets/fonts/CormorantUpright-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

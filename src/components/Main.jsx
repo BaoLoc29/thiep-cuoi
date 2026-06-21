@@ -1,0 +1,63 @@
+import React from "react";
+import heart from "../assets/images/heart.png";
+import DSC_1 from "../assets/images/DSC_4.jpg";
+
+const Main = () => {
+  return (
+    <section className="text-center">
+      <p className="font-pinyon text-xl italic px-4">
+        "Hôn nhân là chuyện cả đời, <br></br>
+        Yêu người vừa ý, cưới người mình thương..."
+      </p>
+      <div className="h-80 gap-10 flex flex-col">
+        {/* box 2 ông bà sui */}
+        <div className="flex font-cafeta justify-around gap-5 text-lg px-5">
+          {/* NHÀ TRAI */}
+          <div>
+            <p className="mb-2">NHÀ TRAI</p>
+            <p className="mb-0 uppercase">Ông Trần Văn Phúc</p>
+            <p className="mb-0 uppercase">Bà Nguyễn Thị Mỹ Dung</p>
+            <p className="mb-0 font-mono text-sm">Xã Phú Lâm, Tỉnh An Giang</p>
+          </div>
+          {/* <div className="w-px self-stretch bg-gray-400"></div> */}
+          {/* NHÀ GÁI */}
+          <div>
+            <p className="mb-2">NHÀ GÁI</p>
+            <p className="mb-0 uppercase">Ông Lâm Khươl</p>
+            <p className="mb-0 uppercase">Bà Lý Thị Thủy</p>
+            <p className="mb-0 font-mono text-sm">Xã Vĩnh Hải, TP. Cần Thơ</p>
+          </div>
+        </div>
+        <div className="flex justify-center items-center">
+          <img
+            src={heart}
+            alt="Heart"
+            className="absolute top-[51rem] w-40 h-40 animate-heartbeat"
+          />
+        </div>
+        {/* box cô dâu & chú rể */}
+        <div className="flex justify-around gap-4 px-3">
+          <div>
+            <p className="mb-2 font-cormorant">CHÚ RỂ</p>
+            <p className="text-5xl mb-0 font-amsterdam">Trần Bảo Lộc</p>
+          </div>
+          <div>
+            <p className="mb-2 font-cormorant">CÔ DÂU</p>
+            <p className="text-5xl mb-0 font-amsterdam">Lâm Thị Thel</p>
+          </div>
+        </div>
+      </div>
+      <div className="flex bg-green-800 gap-3 p-3">
+        <div className="flex justify-center w-1/2">
+          <img src={DSC_1} alt="chú rể" className="w-full h-auto" />
+        </div>
+
+        <div className="flex justify-center w-1/2">
+          <img src={DSC_1} alt="cô dâu" className="w-full h-auto" />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Main;

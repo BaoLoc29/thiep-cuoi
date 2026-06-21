@@ -1,32 +1,45 @@
 import React from "react";
-import DSC_1 from "../assets/images/DSC_1.png";
+import DSC_1 from "../assets/images/DSC_4.jpg";
 
 function Hero() {
   return (
-    <section className="w-full">
-      {/* Banner */}
-      <div className="relative">
-        <div className="h-28 w-full bg-gray-300 md:h-44 lg:h-60"></div>
+    <section className="relative overflow-hidden">
+      {/* Ảnh */}
+      <img src={DSC_1} alt="Ảnh cưới" className="w-full h-auto block" />
 
-        {/* 3 ảnh */}
-        <div className="absolute bottom-0 left-1/2 flex -translate-x-1/2 translate-y-1/2 gap-2 md:gap-4 lg:gap-6">
-          <div className="overflow-hidden rounded-xl border-2 border-green-700 shadow-lg md:rounded-2xl md:border-4">
-            <img src={DSC_1} alt="anh" className="w-20 md:w-32 lg:w-44" />
-          </div>
+      {/* Gradient trắng */}
+      <div
+        className="
+          absolute
+          bottom-0
+          left-0
+          w-full
+          h-[60%]
+          bg-gradient-to-t
+          from-white
+          via-white/80
+          to-transparent
+        "
+      />
 
-          <div className="overflow-hidden rounded-xl border-2 border-green-700 shadow-lg md:rounded-2xl md:border-4">
-            <img src={DSC_1} alt="anh" className="w-20 md:w-32 lg:w-44" />
-          </div>
+      {/* Nội dung */}
+      <div className="absolute inset-0 flex flex-col justify-between text-center text-gray-900">
+        <div>
+          <p className="mt-8 text-3xl font-extralight tracking-[6px] font-serif">
+            Thư Mời Cưới
+          </p>
+        </div>
 
-          <div className="overflow-hidden rounded-xl border-2 border-green-700 shadow-lg md:rounded-2xl md:border-4">
-            <img src={DSC_1} alt="anh" className="w-20 md:w-32 lg:w-44" />
-          </div>
+        <div className="flex flex-col gap-2">
+          <p className="font-amsterdam text-[80px] mb-0">Bảo Lộc & Thị Thel</p>
+
+          <p className="text-2xl font-mono font-bold mb-0">09:30 | Thứ Tư</p>
+
+          <p className="text-4xl tracking-[6px] font-bold font-barlow mb-7">
+            02.09.2026
+          </p>
         </div>
       </div>
-
-      {/* Khoảng trống */}
-      <div className="h-16 md:h-24 lg:h-32 "></div>
-      {/* Phần tiếp theo trong thiệp cưới - tạo file component mới */}
     </section>
   );
 }
