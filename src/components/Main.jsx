@@ -9,7 +9,7 @@ const Main = () => {
         "Hôn nhân là chuyện cả đời, <br></br>
         Yêu người vừa ý, cưới người mình thương..."
       </p>
-      <div className="h-80 gap-10 flex flex-col">
+      <div className="h-[19rem] gap-10 flex flex-col">
         {/* box 2 ông bà sui */}
         <div className="flex font-cafeta justify-around gap-5 text-lg px-5">
           {/* NHÀ TRAI */}
@@ -36,7 +36,7 @@ const Main = () => {
           />
         </div>
         {/* box cô dâu & chú rể */}
-        <div className="flex justify-around gap-4 px-3">
+        <div className="flex justify-around gap-3 px-3">
           <div>
             <p className="mb-2 font-cormorant">CHÚ RỂ</p>
             <p className="text-5xl mb-0 font-amsterdam">Trần Bảo Lộc</p>
