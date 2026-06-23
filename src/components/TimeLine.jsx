@@ -125,11 +125,11 @@ const TimeLine = () => {
           <p className="text-base mb-0 px-5">
             Ấp Long Thạnh 2, Xã Phú Lâm, Tỉnh An Giang
           </p>
-          <div className=" p-4 overflow-hidden rounded-md shadow-md">
+          <div className=" p-4 overflow-hidden rounded-md">
             <iframe
               title="Địa điểm tổ chức lễ cưới"
               src="https://maps.google.com/maps?q=10.763028,105.276306&t=k&z=19&output=embed"
-              className="h-[350px] w-full"
+              className="h-[300px] w-full"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
@@ -138,9 +138,9 @@ const TimeLine = () => {
           </div>
 
           {/* Button */}
-          <div className="mt-8 flex justify-center">
+          <div className="mt-4 flex justify-center">
             <a
-              href="https://maps.google.com/maps?q=10.763028,105.276306&z=18&output=embed"
+              href="https://maps.app.goo.gl/UpBCsM9yqTuxsyT6A"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-lg bg-green-800 px-10 py-2 text-base font-bold uppercase text-white 

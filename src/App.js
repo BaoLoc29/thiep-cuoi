@@ -1,3 +1,5 @@
+import Album from "./components/Album";
+import End from "./components/End";
 import Hero from "./components/Hero";
 import Main from "./components/Main";
 import TimeLine from "./components/TimeLine";
@@ -10,6 +12,8 @@ function App() {
         <Hero />
         <Main />
         <TimeLine />
+        <Album />
+        <End />
       </div>
     </div>
   );

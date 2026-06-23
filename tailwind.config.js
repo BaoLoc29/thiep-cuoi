@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       fontFamily: {
@@ -10,7 +8,8 @@ module.exports = {
         barlow: ["Barlow", "sans-serif"],
         pinyon: ["Pinyon Script", "cursive"],
         cafeta: ["UTM-Cafeta", "sans-serif"],
-        cormorant: ["CormorantUpright-SemiBold", "sans-serif"]
+        ephesis: ["Ephesis", "sans-serif"],
+        cormorant: ["CormorantUpright-SemiBold", "sans-serif"],
       },
       keyframes: {
         heartbeat: {
@@ -28,4 +27,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
