@@ -1,7 +1,7 @@
 import React from "react";
 import DSC_1 from "../assets/images/DSC_4.jpg";
 
-import { Button, Form, Input, Select, InputNumber } from "antd";
+import { Form, Input, Select, InputNumber } from "antd";
 
 const End = () => {
   const [form] = Form.useForm();
@@ -25,7 +25,12 @@ const End = () => {
 
       if (data.success) {
         alert("Gửi thành công!");
+        // tạo popup cảm ơn
         form.resetFields();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       }
     } catch (err) {
       alert("Có lỗi xảy ra");
@@ -40,87 +45,113 @@ const End = () => {
         <span className="text-3xl font-cormorant uppercase">
           Bạn sẽ đến chứ?
         </span>
-        <span className="text-sm">
-          Chúng tôi rất chờ đón sự kiện trọng đại này của cuộc đời. Đám cưới của
-          chúng tôi sẽ trọn vẹn hơn khi có thêm lời chúc phúc và sự hiện diện
-          của các bạn. Xin hãy xác nhận sự có mặt của mình để chúng tôi chuẩn bị
-          đón tiếp một cách chu đáo nhất nhé! Trân trọng!
+        <span className="text-xl font-cormorant">
+          Chúng tôi rất mong được đón tiếp bạn trong ngày trọng đại. Sự hiện
+          diện của bạn là niềm vui và hạnh phúc đối với gia đình chúng tôi.
         </span>
       </div>
-      <Form form={form} layout="vertical" onFinish={onFinish}>
-        <Form.Item
-          label="Họ và tên quý khách"
-          name="fullName"
-          rules={[
-            {
-              required: true,
-              message: "Vui lòng nhập họ tên",
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-
-        <Form.Item label="Số điện thoại" name="phone">
-          <Input />
-        </Form.Item>
-
-        <Form.Item label="Lời chúc" name="message">
-          <Input.TextArea rows={4} />
-        </Form.Item>
-
-        <Form.Item
-          label="Xác nhận tham dự"
-          name="attend"
-          rules={[
-            {
-              required: true,
-              message: "Vui lòng chọn",
-            },
-          ]}
-        >
-          <Select
-            options={[
+      <div className="max-w-xl mx-auto rounded-3xl bg-white/80 backdrop-blur-md p-6 shadow-xl border border-green-100">
+        <Form form={form} layout="vertical" onFinish={onFinish}>
+          <Form.Item
+            label={
+              <span className="text-base font-semibold">Tên quý khách</span>
+            }
+            name="fullName"
+            rules={[
               {
-                value: "Có",
-                label: "Có",
-              },
-              {
-                value: "Không",
-                label: "Không",
+                required: true,
+                message: "Vui lòng nhập tên quý khách",
               },
             ]}
-          />
-        </Form.Item>
+          >
+            <Input size="large" placeholder="Ví dụ: Trần Văn A" />
+          </Form.Item>
 
-        <Form.Item noStyle shouldUpdate>
-          {({ getFieldValue }) =>
-            getFieldValue("attend") === "Có" ? (
-              <Form.Item
-                label="Số lượng khách tham dự"
-                name="guestCount"
-                rules={[
-                  {
-                    required: true,
-                    message: "Vui lòng nhập số lượng khách",
-                  },
-                ]}
-              >
-                <InputNumber
-                  min={1}
-                  max={20}
-                  className="w-full"
-                  placeholder="Ví dụ: 2"
-                />
-              </Form.Item>
-            ) : null
-          }
-        </Form.Item>
+          <Form.Item
+            label={
+              <span className="text-base font-semibold">Số điện thoại</span>
+            }
+            name="phone"
+          >
+            <Input size="large" placeholder="09xxxxxxxx" />
+          </Form.Item>
 
-        <Button type="primary" htmlType="submit">
-          Gửi xác nhận
-        </Button>
-      </Form>
+          <Form.Item
+            label={
+              <span className="text-base font-semibold">Lời chúc phúc</span>
+            }
+            name="message"
+          >
+            <Input.TextArea
+              rows={5}
+              placeholder="Gửi lời chúc đến cô dâu & chú rể..."
+            />
+          </Form.Item>
+
+          <Form.Item
+            label={
+              <span className="text-base font-semibold">
+                Quý khách sẽ tham dự chứ?
+              </span>
+            }
+            name="attend"
+            rules={[
+              {
+                required: true,
+                message: "Vui lòng chọn",
+              },
+            ]}
+          >
+            <Select
+              size="large"
+              placeholder="Chọn"
+              options={[
+                {
+                  value: "Có",
+                  label: "Có, tôi sẽ tham dự",
+                },
+                {
+                  value: "Không",
+                  label: "Xin lỗi, tôi bận mất rồi",
+                },
+              ]}
+            />
+          </Form.Item>
+
+          <Form.Item noStyle shouldUpdate>
+            {({ getFieldValue }) =>
+              getFieldValue("attend") === "Có" ? (
+                <Form.Item
+                  label="Số lượng khách tham dự"
+                  name="guestCount"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Vui lòng nhập số lượng khách",
+                    },
+                  ]}
+                >
+                  <InputNumber
+                    size="large"
+                    min={1}
+                    max={5}
+                    className="w-full"
+                    placeholder="Ví dụ: 2"
+                  />
+                </Form.Item>
+              ) : null
+            }
+          </Form.Item>
+
+          <button
+            type="submit"
+            className="rounded-lg bg-green-800 px-10 py-2 text-base font-bold uppercase text-white 
+              shadow-lg transition hover:bg-green-700 active:scale-95 w-full"
+          >
+            Gửi Lời Chúc
+          </button>
+        </Form>
+      </div>
     </section>
   );
 };
