@@ -15,7 +15,7 @@ const TimeLine = () => {
     <section className="text-center flex flex-col justify-center items-center">
       <div className="w-[260px] pt-5">
         <div className="border-t-2 border-gray-950"></div>
-        <p className="font-pinyon text-5xl mt-5 mb-0">Thư mời</p>
+        <p className="font-pinyon text-5xl my-5">Thiệp mời</p>
       </div>
       <p className="font-cormorant text-lg mb-0">
         THAM DỰ LỄ CƯỚI BẢO LỘC & THỊ THEL
