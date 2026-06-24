@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import DSC_1 from "../assets/images/DSC_4.jpg";
 
-import { Form, Input, Select, InputNumber } from "antd";
+import { Form, Input, Select, InputNumber, Modal } from "antd";
 
 const End = () => {
   const [form] = Form.useForm();
+  const [openModal, setOpenModal] = useState(false);
+  const [attendValue, setAttendValue] = useState("");
+
   const onFinish = async (values) => {
     try {
       const res = await fetch(
@@ -24,8 +27,9 @@ const End = () => {
       const data = await res.json();
 
       if (data.success) {
-        alert("Gửi thành công!");
-        // tạo popup cảm ơn
+        setAttendValue(values.attend);
+        setOpenModal(true);
+
         form.resetFields();
         window.scrollTo({
           top: 0,
@@ -36,13 +40,11 @@ const End = () => {
       alert("Có lỗi xảy ra");
     }
   };
+
   return (
     <section className="relative p-6">
-      <div>
-        <img src={DSC_1} alt="chú rể" className="w-full h-auto" />
-      </div>
-      <div className="flex flex-col gap-4 text-center py-4">
-        <span className="text-3xl font-cormorant uppercase">
+      <div className="flex flex-col gap-4 text-center py-6">
+        <span className="text-2xl font-cormorant uppercase">
           Bạn sẽ đến chứ?
         </span>
         <span className="text-xl font-cormorant">
@@ -151,6 +153,73 @@ const End = () => {
             Gửi Lời Chúc
           </button>
         </Form>
+      </div>
+
+      <Modal
+        open={openModal}
+        footer={null}
+        centered
+        closable={false}
+        getContainer={false}
+        width={380}
+        onCancel={() => setOpenModal(false)}
+      >
+        <div className="flex flex-col items-center pb-2">
+          <span className="text-8xl font-amsterdam font-thin text-green-800">
+            Thank you !!!
+          </span>
+
+          {attendValue === "Có" ? (
+            <p className="mt-4 text-lg text-gray-600 leading-8">
+              💖 Cảm ơn bạn đã xác nhận tham dự.
+              <br />
+              💖 Sự hiện diện của bạn là niềm vui và hạnh phúc của vợ chồng tụi
+              mình.
+              <br />
+              💖 Hẹn gặp bạn vào ngày hôm đó nhé!
+            </p>
+          ) : (
+            <p className="mt-4 text-lg text-gray-600 leading-8">
+              💖 Cảm ơn bạn đã phản hồi.
+              <br />
+              💖 Dù không thể tham dự nhưng lời chúc phúc của bạn vẫn vô cùng ý
+              nghĩa đối với vợ chồng tụi mình.
+              <br />
+              💖 Chúc bạn thật nhiều sức khỏe và hạnh phúc bên gia đình.
+            </p>
+          )}
+
+          <button
+            onClick={() => setOpenModal(false)}
+            className="rounded-lg bg-green-800 px-8 py-3 text-white font-semibold hover:bg-green-700 transition"
+          >
+            Đóng
+          </button>
+        </div>
+      </Modal>
+
+      <div className="relative overflow-hidden mt-6">
+        <img src={DSC_1} alt="chú rể" className="w-full h-auto block" />
+
+        {/* Nội dung */}
+        <div
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 w-[80%] text-center bg-white/10
+    backdrop-blur-md"
+        >
+          <p className="text-6xl font-amsterdam text-white mb-2 drop-shadow-lg">
+            Bảo Lộc & Thị Thel
+          </p>
+
+          <p className="text-4xl font-ephesis text-white mb-0 drop-shadow-lg">
+            Thank You !!!
+          </p>
+
+          <div className="w-40 h-px bg-white/70 mx-auto my-3"></div>
+
+          <p className="text-white tracking-[4px] uppercase text-xs">
+            02.09.2026
+          </p>
+        </div>
       </div>
     </section>
   );

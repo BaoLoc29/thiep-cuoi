@@ -25,7 +25,7 @@ function Hero() {
       {/* Nội dung */}
       <div className="absolute inset-0 flex flex-col justify-between text-center text-gray-900">
         <div>
-          <p className="mt-8 text-3xl font-extralight tracking-[6px] font-serif">
+          <p className="mt-8 text-2xl font-extralight tracking-[6px] font-serif">
             Thư Mời Cưới
           </p>
         </div>
@@ -33,7 +33,9 @@ function Hero() {
         <div className="flex flex-col gap-2">
           <p className="font-amsterdam text-[80px] mb-0">Bảo Lộc & Thị Thel</p>
 
-          <p className="text-2xl font-mono font-bold mb-0">09:30 | Thứ Tư</p>
+          <p className="text-2xl font-cafeta font-medium mb-0">
+            09:30 | Thứ Tư
+          </p>
 
           <p className="text-4xl tracking-[6px] font-bold font-barlow mb-7">
             02.09.2026

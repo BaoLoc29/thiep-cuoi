@@ -6,9 +6,8 @@ import TimeLine from "./components/TimeLine";
 
 function App() {
   return (
-    <div className="w-full h-full bg-gray-200 flex justify-center items-center">
-      {/* Khung điện thoại */}
-      <div className="w-[420px] aspect-[9/16] bg-white shadow-2xl">
+    <div className="min-h-screen bg-gray-200 flex justify-center">
+      <div className="w-full max-w-[420px] bg-white shadow-2xl">
         <Hero />
         <Main />
         <TimeLine />
