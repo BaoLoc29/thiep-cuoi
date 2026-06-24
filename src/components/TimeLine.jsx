@@ -93,7 +93,7 @@ const TimeLine = () => {
                 {week.map((day, index) => (
                   <td
                     key={index}
-                    className="relative h-12 border border-green-400 text-center align-middle text-lg text-green-800"
+                    className="relative h-12 border border-green-800 text-center align-middle text-lg text-green-800"
                   >
                     {day === 2 ? (
                       <>

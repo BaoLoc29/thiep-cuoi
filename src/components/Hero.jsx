@@ -33,11 +33,11 @@ function Hero() {
         <div className="flex flex-col gap-2">
           <p className="font-amsterdam text-[80px] mb-0">Bảo Lộc & Thị Thel</p>
 
-          <p className="text-2xl font-cafeta font-medium mb-0">
+          <p className="text-3xl font-cafeta font-medium mb-0">
             09:30 | Thứ Tư
           </p>
 
-          <p className="text-4xl tracking-[6px] font-bold font-barlow mb-7">
+          <p className="text-4xl tracking-[6px] font-bold font-cafeta mb-7">
             02.09.2026
           </p>
         </div>
