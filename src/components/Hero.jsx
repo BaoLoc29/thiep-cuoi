@@ -2,15 +2,12 @@ import React, { useEffect, useState } from "react";
 import DSC_1 from "../assets/images/DSC_4.jpg";
 
 function Hero() {
-  const [showTitle, setShowTitle] = useState(false);
-  const [showContent, setShowContent] = useState(false);
+  const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-    setShowTitle(true);
-
     const timer = setTimeout(() => {
-      setShowContent(true);
-    }, 500);
+      setAnimate(true);
+    }, 100);
 
     return () => clearTimeout(timer);
   }, []);
@@ -37,41 +34,51 @@ function Hero() {
 
       {/* Nội dung */}
       <div className="absolute inset-0 flex flex-col justify-between text-center text-gray-900">
-        {/* Thư mời cưới */}
+        {/* Thư Mời Cưới */}
         <div
           className={`
-            transition-all duration-1000
+            transition-all duration-[1400ms] ease-out
             ${
-              showTitle
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 -translate-y-5"
+              animate ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8"
             }
           `}
         >
-          <p className="mt-8 text-2xl font-extralight tracking-[5px] font-serif">
+          <p className="mt-8 text-2xl font-extralight tracking-[6px] font-serif">
             Thư Mời Cưới
           </p>
         </div>
 
-        {/* Tên + ngày cưới */}
-        <div
-          className={`
-            flex flex-col gap-2
-            transition-all duration-[1500ms]
-            ${showContent ? "opacity-100 scale-100" : "opacity-0 scale-50"}
-          `}
-        >
-          <p className="font-amsterdam text-[80px] mb-0 tracking-[2px]">
+        <div className="flex flex-col gap-2">
+          {/* Tên cô dâu chú rể */}
+          <p
+            className={`
+              font-amsterdam text-[80px] mb-0 tracking-[2px]
+              transition-all duration-[1400ms] ease-out
+              ${animate ? "opacity-100 scale-100" : "opacity-0 scale-[0.3]"}
+            `}
+          >
             Bảo Lộc & Thị Thel
           </p>
 
-          <p className="text-3xl font-cafeta font-medium mb-0">
-            09:30 | Thứ Tư
-          </p>
+          {/* Thời gian + ngày cưới */}
+          <div
+            className={`
+              transition-all duration-[1400ms] ease-out
+              ${
+                animate
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+              }
+            `}
+          >
+            <p className="text-3xl font-cafeta font-medium mb-0">
+              09:30 | Thứ Tư
+            </p>
 
-          <p className="text-4xl tracking-[6px] font-bold font-cafeta mb-7">
-            02.09.2026
-          </p>
+            <p className="text-4xl tracking-[6px] font-bold font-cafeta mb-7">
+              02.09.2026
+            </p>
+          </div>
         </div>
       </div>
     </section>
