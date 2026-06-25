@@ -67,7 +67,7 @@ const TimeLine = () => {
           <p className="text-[52px] italic text-green-800 font-pinyon mb-0">
             Tháng 9
           </p>
-          <p className="text-7xl font-black text-green-800 font-barlow mb-3">
+          <p className="text-[80px] font-black text-green-800 font-barlow mb-3">
             2026
           </p>
         </div>

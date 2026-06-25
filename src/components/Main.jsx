@@ -44,11 +44,11 @@ const Main = () => {
         <div className="flex justify-around gap-2">
           <div>
             <p className="mb-2 font-cormorant text-xl">CHÚ RỂ</p>
-            <p className="text-[55px] mb-0 font-amsterdam">Trần Bảo Lộc</p>
+            <p className="text-[55px] font-amsterdam">Trần Bảo Lộc</p>
           </div>
           <div>
             <p className="mb-2 font-cormorant text-xl">CÔ DÂU</p>
-            <p className="text-[55px] mb-0 font-amsterdam">Lâm Thị Thel</p>
+            <p className="text-[55px] font-amsterdam">Lâm Thị Thel</p>
           </div>
         </div>
       </div>
