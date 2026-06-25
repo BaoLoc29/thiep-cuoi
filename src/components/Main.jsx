@@ -19,7 +19,7 @@ const Main = () => {
             <p className="mb-0 uppercase">Ông Trần Văn Phúc</p>
             <p className="mb-0 uppercase">Bà Nguyễn Thị Mỹ Dung</p>
             <p className="mb-0 font-mono text-sm tracking-[1px]">
-              Xã Phú Lâm, An Giang
+              Phú Lâm, An Giang
             </p>
           </div>
           {/* <div className="w-px self-stretch bg-gray-400"></div> */}
@@ -29,7 +29,7 @@ const Main = () => {
             <p className="mb-0 uppercase">Ông Lâm Khươl</p>
             <p className="mb-0 uppercase">Bà Lý Thị Thủy</p>
             <p className="mb-0 font-mono text-sm tracking-[1px]">
-              Xã Vĩnh Hải, Cần Thơ
+              Vĩnh Hải, Cần Thơ
             </p>
           </div>
         </div>
@@ -52,7 +52,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div className="flex bg-green-800 gap-3 p-3 mt-4">
+      <div className="flex bg-green-800 gap-3 p-3 mt-2">
         <div className="flex justify-center w-1/2">
           <img src={DSC_1} alt="chú rể" className="w-full h-auto" />
         </div>

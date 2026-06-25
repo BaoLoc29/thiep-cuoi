@@ -67,7 +67,7 @@ const TimeLine = () => {
           <p className="text-[52px] italic text-green-800 font-pinyon mb-0">
             Tháng 9
           </p>
-          <p className="text-[80px] font-black text-green-800 font-barlow mb-3">
+          <p className="text-[80px] font-black text-green-800 font-sans mb-1">
             2026
           </p>
         </div>
@@ -120,7 +120,7 @@ const TimeLine = () => {
       </div>
       <div>
         <p className="font-pinyon text-4xl mt-5 mb-3">Địa điểm tổ chức</p>
-        <div className="w-full bg-gray-200 rounded-3xl py-6">
+        <div className="w-full bg-gray-200 rounded-3xl py-4">
           <p className="text-xl mb-2 font-bold">Tại Tư Gia Nhà Trai</p>
           <p className="text-base mb-0 px-5">
             Ấp Long Thạnh 2, Xã Phú Lâm, Tỉnh An Giang
@@ -138,7 +138,7 @@ const TimeLine = () => {
           </div>
 
           {/* Button */}
-          <div className="mt-4 flex justify-center">
+          <div className="mt-2 flex justify-center">
             <a
               href="https://maps.app.goo.gl/UpBCsM9yqTuxsyT6A"
               target="_blank"
