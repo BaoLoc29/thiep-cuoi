@@ -12,13 +12,15 @@ const Main = () => {
 
       <div className="h-[19rem] gap-10 flex flex-col">
         {/* box 2 ông bà sui */}
-        <div className="flex font-cafeta justify-around gap-5 text-lg px-5">
+        <div className="flex font-cafeta justify-between text-lg px-5">
           {/* NHÀ TRAI */}
           <div>
             <p className="mb-2">NHÀ TRAI</p>
             <p className="mb-0 uppercase">Ông Trần Văn Phúc</p>
             <p className="mb-0 uppercase">Bà Nguyễn Thị Mỹ Dung</p>
-            <p className="mb-0 font-mono text-sm">Xã Phú Lâm, An Giang</p>
+            <p className="mb-0 font-mono text-sm tracking-[1px]">
+              Xã Phú Lâm, An Giang
+            </p>
           </div>
           {/* <div className="w-px self-stretch bg-gray-400"></div> */}
           {/* NHÀ GÁI */}
@@ -26,7 +28,9 @@ const Main = () => {
             <p className="mb-2">NHÀ GÁI</p>
             <p className="mb-0 uppercase">Ông Lâm Khươl</p>
             <p className="mb-0 uppercase">Bà Lý Thị Thủy</p>
-            <p className="mb-0 font-mono text-sm">Xã Vĩnh Hải, Cần Thơ</p>
+            <p className="mb-0 font-mono text-sm tracking-[1px]">
+              Xã Vĩnh Hải, Cần Thơ
+            </p>
           </div>
         </div>
         <div className="flex justify-center items-center">

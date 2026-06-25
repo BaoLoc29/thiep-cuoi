@@ -31,7 +31,9 @@ function Hero() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <p className="font-amsterdam text-[80px] mb-0">Bảo Lộc & Thị Thel</p>
+          <p className="font-amsterdam text-[80px] mb-0 tracking-[2px]">
+            Bảo Lộc & Thị Thel
+          </p>
 
           <p className="text-3xl font-cafeta font-medium mb-0">
             09:30 | Thứ Tư
