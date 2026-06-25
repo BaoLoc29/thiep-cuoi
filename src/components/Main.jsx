@@ -12,7 +12,7 @@ const Main = () => {
 
       <div className="h-[19rem] gap-10 flex flex-col">
         {/* box 2 ông bà sui */}
-        <div className="flex font-cafeta justify-between text-lg px-5">
+        <div className="flex font-cafeta justify-around gap-2 text-lg px-2">
           {/* NHÀ TRAI */}
           <div>
             <p className="mb-2">NHÀ TRAI</p>
@@ -52,7 +52,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div className="flex bg-green-800 gap-3 p-3">
+      <div className="flex bg-green-800 gap-3 p-3 mt-4">
         <div className="flex justify-center w-1/2">
           <img src={DSC_1} alt="chú rể" className="w-full h-auto" />
         </div>
