@@ -37,7 +37,7 @@ const Main = () => {
           <img
             src={heart}
             alt="Heart"
-            className="absolute top-[51rem] w-40 h-40 animate-heartbeat"
+            className="absolute top-[50rem] w-40 h-40 animate-heartbeat"
           />
         </div>
         {/* box cô dâu & chú rể */}
