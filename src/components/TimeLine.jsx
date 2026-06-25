@@ -64,10 +64,10 @@ const TimeLine = () => {
       {/* Lịch */}
       <div className="w-full px-6 pb-6">
         <div className="flex justify-between items-center">
-          <p className="text-[52px] italic text-green-800 font-pinyon mb-0">
+          <p className="text-6xl italic text-green-800 font-pinyon mb-0">
             Tháng 9
           </p>
-          <p className="text-[80px] font-black text-green-800 font-sans mb-1">
+          <p className="text-7xl font-black text-green-800 font-sans mb-1">
             2026
           </p>
         </div>
@@ -120,7 +120,7 @@ const TimeLine = () => {
       </div>
       <div>
         <p className="font-pinyon text-4xl mt-5 mb-3">Địa điểm tổ chức</p>
-        <div className="w-full bg-gray-200 rounded-3xl py-4">
+        <div className="w-full bg-gray-200 rounded-3xl py-6">
           <p className="text-xl mb-2 font-bold">Tại Tư Gia Nhà Trai</p>
           <p className="text-base mb-0 px-5">
             Ấp Long Thạnh 2, Xã Phú Lâm, Tỉnh An Giang
