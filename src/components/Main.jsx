@@ -35,7 +35,7 @@ const Main = () => {
           transform-gpu
           will-change-transform
           transition-[opacity,transform]
-          duration-[4000ms]
+          duration-[5000ms]
           ease-[cubic-bezier(0.22,1,0.36,1)]
           ${animate ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-16"}
         `}
@@ -53,7 +53,7 @@ const Main = () => {
               transform-gpu
               will-change-transform
               transition-[transform,opacity]
-              duration-[4000ms]
+              duration-[5000ms]
               ease-[cubic-bezier(0.22,1,0.36,1)]
               ${animate ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-28"}
             `}
@@ -72,7 +72,7 @@ const Main = () => {
               transform-gpu
               will-change-transform
               transition-[transform,opacity]
-              duration-[4000ms]
+              duration-[5000ms]
               ease-[cubic-bezier(0.22,1,0.36,1)]
               ${animate ? "opacity-100 translate-x-0" : "opacity-0 translate-x-28"}
             `}
@@ -89,21 +89,7 @@ const Main = () => {
           <img
             src={heart}
             alt="Heart"
-            className={`
-              absolute
-              top-[50rem]
-              w-40
-              h-40
-              animate-heartbeat
-
-              will-change-opacity
-              transition-opacity
-              duration-[4000ms]
-              ease-[cubic-bezier(0.22,1,0.36,1)]
-              delay-500
-
-              ${animate ? "opacity-100" : "opacity-0"}
-            `}
+            className="absolute top-[50rem] w-40 h-40 animate-heartbeat"
           />
         </div>
         {/* box cô dâu & chú rể */}
@@ -118,7 +104,7 @@ const Main = () => {
                 transform-gpu
                 will-change-transform
                 transition-[transform,opacity]
-                duration-[4000ms]
+                duration-[5000ms]
                 ease-[cubic-bezier(0.22,1,0.36,1)]
                 ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-44"}
               `}
@@ -136,7 +122,7 @@ const Main = () => {
                 transform-gpu
                 will-change-transform
                 transition-[transform,opacity]
-                duration-[4000ms]
+                duration-[5000ms]
                 ease-[cubic-bezier(0.22,1,0.36,1)]
                 ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-44"}
               `}
