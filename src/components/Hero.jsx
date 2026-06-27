@@ -7,7 +7,7 @@ function Hero() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimate(true);
-    }, 100);
+    }, 250);
 
     return () => clearTimeout(timer);
   }, []);
@@ -35,15 +35,22 @@ function Hero() {
       {/* Nội dung */}
       <div className="absolute inset-0 flex flex-col justify-between text-center text-gray-900">
         {/* Thư Mời Cưới */}
-        <div
-          className={`
-            transition-all duration-[1400ms] ease-out
-            ${
-              animate ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8"
-            }
-          `}
-        >
-          <p className="mt-8 text-2xl font-extralight tracking-[6px] font-serif">
+        <div>
+          <p
+            className={`
+      mt-8
+      text-2xl
+      font-extralight
+      tracking-[6px]
+      font-serif
+      transform-gpu
+      will-change-transform
+      transition-[opacity,transform]
+      duration-[2200ms]
+      ease-[cubic-bezier(0.22,1,0.36,1)]
+      ${animate ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-16"}
+    `}
+          >
             Thư Mời Cưới
           </p>
         </div>
@@ -52,30 +59,58 @@ function Hero() {
           {/* Tên cô dâu chú rể */}
           <p
             className={`
-              font-amsterdam text-[80px] mb-0 tracking-[2px]
-              transition-all duration-[1400ms] ease-out
-              ${animate ? "opacity-100 scale-100" : "opacity-0 scale-[0.3]"}
+              font-amsterdam
+              text-[80px]
+              mb-0
+              tracking-[2px]
+              transform-gpu
+              will-change-transform
+              transition-[transform,opacity]
+              duration-[2600ms]
+              ease-[cubic-bezier(0.22,1,0.36,1)]
+              origin-center
+              ${animate ? "opacity-100 scale-100" : "opacity-0 scale-[0.15]"}
             `}
           >
             Bảo Lộc & Thị Thel
           </p>
 
           {/* Thời gian + ngày cưới */}
-          <div
-            className={`
-              transition-all duration-[1400ms] ease-out
-              ${
-                animate
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8"
-              }
-            `}
-          >
-            <p className="text-3xl font-cafeta font-medium mb-0">
+          <div>
+            <p
+              className={`
+                text-3xl
+                font-cafeta
+                font-medium
+                mb-0
+                transform-gpu
+                will-change-transform
+                transition-[transform,opacity]
+                duration-[2300ms]
+                ease-[cubic-bezier(0.22,1,0.36,1)]
+                delay-300
+                ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
+              `}
+            >
               09:30 | Thứ Tư
             </p>
 
-            <p className="text-4xl tracking-[6px] font-bold font-cafeta mb-7">
+            <p
+              className={`
+    text-4xl
+    tracking-[6px]
+    font-bold
+    font-cafeta
+    mb-7
+    transform-gpu
+    will-change-transform
+    transition-[transform,opacity]
+    duration-[2300ms]
+    ease-[cubic-bezier(0.22,1,0.36,1)]
+    delay-500
+    ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
+  `}
+            >
               02.09.2026
             </p>
           </div>
