@@ -1,7 +1,10 @@
 import album from "../assets/images/album.png";
-import { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import useInViewOnce from "../hook/useInViewOnce.js";
+
 const Album = () => {
   const [images, setImages] = useState([]);
+
   useEffect(() => {
     fetch(
       "https://script.google.com/macros/s/AKfycbzJ7cNS-_ZHTPJfSSz3nSSDN_ztcfcBfqV7dkEj6m61mtMuvGthtgaksbi5sPtnpmmV/exec",
@@ -9,10 +12,27 @@ const Album = () => {
       .then((res) => res.json())
       .then((data) => setImages(data));
   }, []);
+
+  const { ref, show } = useInViewOnce(0.1);
   return (
-    <section className="px-6">
+    <section ref={ref} className="px-6 overflow-hidden">
       <div className="flex items-center justify-between h-14 mt-5">
-        <p className="font-ephesis text-[32px] mb-0"> Album hình cưới</p>
+        <p
+          className={`
+            font-ephesis 
+            text-[32px] 
+            mb-0
+            transform-gpu
+            will-change-transform
+            transition-[transform,opacity]
+            duration-[5000ms]
+            ease-[cubic-bezier(0.22,1,0.36,1)]
+            origin-center
+            ${show ? "opacity-100 scale-100" : "opacity-0 scale-50"}
+          `}
+        >
+          Album hình cưới
+        </p>
         <div className="w-1/2 h-28 overflow-hidden relative">
           <img
             src={album}
@@ -27,7 +47,25 @@ const Album = () => {
             key={img.id}
             src={img.url}
             alt={img.name}
-            className="w-full h-auto"
+            style={{
+              transitionDelay: `${img * 120}ms`,
+            }}
+            className={`
+              w-full
+              h-auto
+              transform-gpu
+              will-change-transform
+              transition-[transform,opacity]
+              duration-[5000ms]
+              ease-[cubic-bezier(0.22,1,0.36,1)]
+              ${
+                show
+                  ? "opacity-100 translate-x-0"
+                  : img % 2 === 0
+                    ? "opacity-0 -translate-x-20"
+                    : "opacity-0 translate-x-20"
+              }
+            `}
           />
         ))}
       </div>

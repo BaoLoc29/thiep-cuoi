@@ -1,32 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import heart from "../assets/images/heart.png";
 import DSC_1 from "../assets/images/DSC_4.jpg";
+import useInViewOnce from "../hook/useInViewOnce.js";
 
 const Main = () => {
-  const sectionRef = useRef(null);
-  const [animate, setAnimate] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setAnimate(true);
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.25,
-      },
-    );
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
+  const { ref, show } = useInViewOnce(0.2);
 
   return (
-    <section ref={sectionRef} className="text-center overflow-hidden">
+    <section ref={ref} className="text-center overflow-hidden">
       <p
         className={`
           font-pinyon
@@ -37,7 +18,7 @@ const Main = () => {
           transition-[opacity,transform]
           duration-[5000ms]
           ease-[cubic-bezier(0.22,1,0.36,1)]
-          ${animate ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-16"}
+          ${show ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-16"}
         `}
       >
         "Hôn nhân là chuyện cả đời, <br></br>
@@ -55,7 +36,7 @@ const Main = () => {
               transition-[transform,opacity]
               duration-[5000ms]
               ease-[cubic-bezier(0.22,1,0.36,1)]
-              ${animate ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-28"}
+              ${show ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-28"}
             `}
           >
             <p className="mb-2">NHÀ TRAI</p>
@@ -74,7 +55,7 @@ const Main = () => {
               transition-[transform,opacity]
               duration-[5000ms]
               ease-[cubic-bezier(0.22,1,0.36,1)]
-              ${animate ? "opacity-100 translate-x-0" : "opacity-0 translate-x-28"}
+              ${show ? "opacity-100 translate-x-0" : "opacity-0 translate-x-28"}
             `}
           >
             <p className="mb-2">NHÀ GÁI</p>
@@ -89,7 +70,7 @@ const Main = () => {
           <img
             src={heart}
             alt="Heart"
-            className="absolute top-[50rem] w-40 h-40 animate-heartbeat"
+            className="absolute top-[50rem] w-40 h-40 show-heartbeat"
           />
         </div>
         {/* box cô dâu & chú rể */}
@@ -106,7 +87,7 @@ const Main = () => {
                 transition-[transform,opacity]
                 duration-[5000ms]
                 ease-[cubic-bezier(0.22,1,0.36,1)]
-                ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-28"}
+                ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-28"}
               `}
             >
               Trần Bảo Lộc
@@ -124,7 +105,7 @@ const Main = () => {
                 transition-[transform,opacity]
                 duration-[5000ms]
                 ease-[cubic-bezier(0.22,1,0.36,1)]
-                ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-28"}
+                ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-28"}
               `}
             >
               Lâm Thị Thel
@@ -145,7 +126,7 @@ const Main = () => {
               transition-[transform,opacity]
               duration-[5000ms]
               ease-[cubic-bezier(0.22,1,0.36,1)]
-              ${animate ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-28"}
+              ${show ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-28"}
             `}
           />
         </div>
@@ -162,7 +143,7 @@ const Main = () => {
               transition-[transform,opacity]
               duration-[5000ms]
               ease-[cubic-bezier(0.22,1,0.36,1)]
-              ${animate ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-28"}
+              ${show ? "opacity-100 translate-x-0" : "opacity-0 translate-x-28"}
             `}
           />
         </div>

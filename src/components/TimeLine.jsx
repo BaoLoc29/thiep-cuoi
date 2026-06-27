@@ -2,8 +2,15 @@ import React from "react";
 import DSC_1 from "../assets/images/DSC_4.jpg";
 import heart from "../assets/images/heart.png";
 import endpicture from "../assets/images/pic.png";
+import useInViewOnce from "../hook/useInViewOnce.js";
 
 const TimeLine = () => {
+  const invite = useInViewOnce(0.2);
+
+  const ceremony = useInViewOnce(0.2);
+
+  const calendar = useInViewOnce(0.15);
+
   const days = [
     ["", 1, 2, 3, 4, 5, 6],
     [7, 8, 9, 10, 11, 12, 13],
@@ -12,59 +19,231 @@ const TimeLine = () => {
     [28, 29, 30, "", "", "", ""],
   ];
   return (
-    <section className="text-center flex flex-col justify-center items-center">
-      <div className="w-[260px] pt-5">
-        <div className="border-t-2 border-gray-950"></div>
-        <p className="font-pinyon text-5xl my-5">Thiệp mời</p>
-      </div>
-      <p className="font-cormorant text-lg mb-0">
-        THAM DỰ LỄ CƯỚI BẢO LỘC & THỊ THEL
-      </p>
-      <div className="flex gap-2 px-2 py-5 items-center">
-        <div className="flex-1 justify-center">
-          <img src={DSC_1} alt="chú rể" className="w-full h-auto" />
+    <section
+      ref={invite.ref}
+      className="text-center flex flex-col justify-center items-center overflow-hidden"
+    >
+      <div ref={invite.ref}>
+        <div className="w-[220px] pt-5 my-0 mx-auto">
+          <div className="border-t-2 border-gray-950"></div>
+          <p
+            className={`
+            text-center
+            font-pinyon
+            text-5xl
+            my-5
+            transform-gpu
+            will-change-transform
+            transition-[transform,opacity]
+            duration-[5000ms]
+            ease-[cubic-bezier(0.22,1,0.36,1)]
+            ${invite.show ? "opacity-100 scale-100" : "opacity-0 scale-50"}
+          `}
+          >
+            Thiệp mời
+          </p>
         </div>
+        <p
+          className={`
+          font-cormorant
+          text-lg
+          mb-0
+          transform-gpu
+          will-change-transform
+          transition-[transform,opacity]
+          duration-[5000ms]
+          ease-[cubic-bezier(0.22,1,0.36,1)]
+          ${invite.show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
+        `}
+        >
+          THAM DỰ LỄ CƯỚI BẢO LỘC & THỊ THEL
+        </p>
+        <div className="flex gap-2 px-2 py-5 items-center">
+          <div className="flex-1 justify-center">
+            <img
+              src={DSC_1}
+              alt="chú rể"
+              className={`
+              w-full
+              h-auto
+              transform-gpu
+              will-change-transform
+              transition-[transform,opacity]
+              duration-[5000ms]
+              ease-[cubic-bezier(0.22,1,0.36,1)]
+              ${invite.show ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}
+            `}
+            />
+          </div>
 
-        <div className="flex-[1.2] justify-center">
-          <img src={DSC_1} alt="cô dâu" className="w-full h-auto" />
-        </div>
+          <div className="flex-[1.2] justify-center">
+            <img
+              src={DSC_1}
+              alt="cô dâu"
+              className={`
+              w-full
+              h-auto
+              transform-gpu
+              will-change-transform
+              transition-[transform,opacity]
+              duration-[5000ms]
+              ease-[cubic-bezier(0.22,1,0.36,1)]
+              ${
+                invite.show
+                  ? "opacity-100 translate-y-0 scale-100"
+                  : "opacity-0 translate-y-10 scale-95"
+              }
+            `}
+            />
+          </div>
 
-        <div className="flex-1 justify-center">
-          <img src={DSC_1} alt="cô dâu" className="w-full h-auto" />
+          <div className="flex-1 justify-center">
+            <img
+              src={DSC_1}
+              alt="cô dâu"
+              className={`
+              w-full
+              h-auto
+              transform-gpu
+              will-change-transform
+              transition-[transform,opacity]
+              duration-[5000ms]
+              ease-[cubic-bezier(0.22,1,0.36,1)]
+              ${invite.show ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"}
+            `}
+            />
+          </div>
         </div>
       </div>
-      <div className="font-sans text-center py-5">
-        <p className="font-bold text-lg mb-0">TIỆC MỪNG LỄ THÀNH HÔN</p>
-        <p className="text-base font-medium mb-0">Vào lúc</p>
-      </div>
-      <div className="flex items-center w-full">
-        <div className="flex-1 text-center">
-          <p className="text-lg font-normal">09:30</p>
+      <div ref={ceremony.ref}>
+        <div className="font-sans text-center py-5">
+          <p className="font-bold text-lg mb-0">TIỆC MỪNG LỄ THÀNH HÔN</p>
+          <p className="text-base font-medium mb-0">Vào lúc</p>
         </div>
-        <div className="h-24 w-px bg-gray-400"></div>
-        <div className="flex-[1.1] text-center ">
-          <p className="text-lg tracking-[2px] mb-2">Thứ Tư</p>
+        <div className="flex items-center w-full">
+          <div className="flex-1 text-center">
+            <p
+              className={`
+              text-lg
+              flex-1
+              text-center
+              transform-gpu
+              will-change-transform
+              transition-[transform,opacity]
+              duration-[5000ms]
+              ease-[cubic-bezier(0.22,1,0.36,1)]
+              ${ceremony.show ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}
+              `}
+            >
+              09:30
+            </p>
+          </div>
+          <div className="h-24 w-px bg-gray-400"></div>
+          <div className="flex-1 text-center ">
+            <p
+              className={`
+              text-lg 
+              tracking-[1px] 
+              mb-2
+              transform-gpu
+              will-change-transform
+              transition-[opacity,transform]
+              duration-[5000ms]
+              ease-[cubic-bezier(0.22,1,0.36,1)]
+              ${ceremony.show ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8"}
+            `}
+            >
+              Thứ Tư
+            </p>
 
-          <h2 className="my-2 text-5xl font-bold leading-none">02</h2>
+            <p
+              className={`
+            my-0 
+            text-4xl 
+            font-bold 
+            leading-none
+            transform-gpu
+            will-change-transform
+            transition-[transform,opacity]
+            duration-[5000ms]
+            ease-[cubic-bezier(0.22,1,0.36,1)]
+            origin-center
+            ${ceremony.show ? "opacity-100 scale-100" : "opacity-0 scale-50"}
+          `}
+            >
+              02
+            </p>
 
-          <p className="text-lg tracking-[2px]">Tháng 9</p>
+            <p
+              className={`
+              text-lg 
+              tracking-[1px] 
+              my-2
+              transform-gpu
+              will-change-transform
+              transition-[opacity,transform]
+              duration-[5000ms]
+              ease-[cubic-bezier(0.22,1,0.36,1)]
+              ${ceremony.show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
+            `}
+            >
+              Tháng 9
+            </p>
+          </div>
+          <div className="h-24 w-px bg-gray-400"></div>
+          <div className="flex-1 text-center">
+            <p
+              className={`
+              text-lg
+              flex-1
+              text-center
+              transform-gpu
+              will-change-transform
+              transition-[transform,opacity]
+              duration-[5000ms]
+              ease-[cubic-bezier(0.22,1,0.36,1)]
+              ${ceremony.show ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}
+              `}
+            >
+              Năm 2026
+            </p>
+          </div>
         </div>
-        <div className="h-24 w-px bg-gray-400"></div>
-        <div className="flex-1 text-center">
-          <p className="text-lg font-normal">Năm 2026</p>
+        <div
+          className={`
+          text-base 
+          italic 
+          py-2
+          transform-gpu
+          will-change-transform
+          transition-[opacity,transform]
+          duration-[5000ms]
+          ease-[cubic-bezier(0.22,1,0.36,1)]
+          ${ceremony.show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+        `}
+        >
+          <p>(Tức ngày 21 tháng 7 năm Bính Ngọ)</p>
         </div>
       </div>
-      <div className="text-base italic">
-        <p>(Tức ngày 21 tháng 7 năm Bính Ngọ)</p>
-      </div>
-      {/* <div className="text-lg">
-        <p>Tại Tư Gia Nhà Trai</p>
-      </div> */}
 
       {/* Lịch */}
-      <div className="w-full px-6 pb-6">
+      <div ref={calendar.ref} className="w-full px-6 pb-6">
         <div className="flex justify-between items-center">
-          <p className="text-5xl italic text-green-800 font-pinyon mb-0">
+          <p
+            className={`
+            text-5xl 
+            italic 
+          text-green-800 
+            font-pinyon 
+            mb-0
+            transform-gpu
+            will-change-transform
+            transition-[transform,opacity]
+            duration-[5000ms]
+            ease-[cubic-bezier(0.22,1,0.36,1)]
+            ${calendar.show ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}
+            `}
+          >
             Tháng 9
           </p>
           <p className="text-7xl font-black text-green-800 font-sans mb-1">
@@ -79,7 +258,7 @@ const TimeLine = () => {
               {["T2", "T3", "T4", "T5", "T6", "T7", "CN"].map((d) => (
                 <th
                   key={d}
-                  className="border border-[#cdbdb1] py-2 text-base font-semibold"
+                  className="border border-black py-2 text-base font-semibold"
                 >
                   {d}
                 </th>
@@ -100,10 +279,24 @@ const TimeLine = () => {
                         <img
                           src={heart}
                           alt="Heart"
-                          className="absolute h-16 -top-1 animate-heartbeat pointer-events-none"
+                          className="absolute h-16 -top-1 calendar.show-heartbeat pointer-events-none"
                         />
 
-                        <span className="relative font-bold z-999">2</span>
+                        <span
+                          className={`
+                            relative 
+                            font-bold 
+                            z-999
+                            transform-gpu
+                            will-change-transform
+                            transition-[opacity,transform]
+                            duration-[5000ms]
+                            ease-[cubic-bezier(0.22,1,0.36,1)]
+                            ${calendar.show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
+                          `}
+                        >
+                          2
+                        </span>
                       </>
                     ) : (
                       day
@@ -116,10 +309,39 @@ const TimeLine = () => {
         </table>
       </div>
       <div>
-        <img src={endpicture} alt="" className="w-full h-auto" />
+        <img
+          src={endpicture}
+          alt=""
+          className={`
+            w-full 
+            h-auto
+            transform-gpu
+            will-change-transform
+            transition-[transform,opacity]
+            duration-[5000ms]
+            ease-[cubic-bezier(0.22,1,0.36,1)]
+            ${calendar.show ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}
+            `}
+        />
       </div>
       <div>
-        <p className="font-pinyon text-4xl mt-5 mb-3">Địa điểm tổ chức</p>
+        <p
+          className={`
+            font-pinyon 
+            text-4xl 
+            mt-5 
+            mb-3
+            transform-gpu
+            will-change-transform
+            transition-[transform,opacity]
+            duration-[5000ms]
+            ease-[cubic-bezier(0.22,1,0.36,1)]
+            origin-center
+            ${calendar.show ? "opacity-100 scale-100" : "opacity-0 scale-50"}
+          `}
+        >
+          Địa điểm tổ chức
+        </p>
         <div className="w-full bg-gray-200 rounded-3xl py-6">
           <p className="text-xl mb-2 font-bold">Tại Tư Gia Nhà Trai</p>
           <p className="text-base mb-0 px-5">
