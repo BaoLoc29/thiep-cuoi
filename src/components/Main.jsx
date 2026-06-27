@@ -106,7 +106,7 @@ const Main = () => {
                 transition-[transform,opacity]
                 duration-[5000ms]
                 ease-[cubic-bezier(0.22,1,0.36,1)]
-                ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-44"}
+                ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-28"}
               `}
             >
               Trần Bảo Lộc
@@ -124,7 +124,7 @@ const Main = () => {
                 transition-[transform,opacity]
                 duration-[5000ms]
                 ease-[cubic-bezier(0.22,1,0.36,1)]
-                ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-44"}
+                ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-28"}
               `}
             >
               Lâm Thị Thel
@@ -134,11 +134,37 @@ const Main = () => {
       </div>
       <div className="flex bg-green-800 gap-3 p-3 relative z-10">
         <div className="flex justify-center w-1/2">
-          <img src={DSC_1} alt="chú rể" className="w-full h-auto" />
+          <img
+            src={DSC_1}
+            alt="chú rể"
+            className={`
+              w-full
+              h-auto
+              transform-gpu
+              will-change-transform
+              transition-[transform,opacity]
+              duration-[5000ms]
+              ease-[cubic-bezier(0.22,1,0.36,1)]
+              ${animate ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-28"}
+            `}
+          />
         </div>
 
         <div className="flex justify-center w-1/2">
-          <img src={DSC_1} alt="cô dâu" className="w-full h-auto" />
+          <img
+            src={DSC_1}
+            alt="chú rể"
+            className={`
+              w-full
+              h-auto
+              transform-gpu
+              will-change-transform
+              transition-[transform,opacity]
+              duration-[5000ms]
+              ease-[cubic-bezier(0.22,1,0.36,1)]
+              ${animate ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-28"}
+            `}
+          />
         </div>
       </div>
     </section>
