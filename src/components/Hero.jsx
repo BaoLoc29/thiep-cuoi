@@ -38,18 +38,18 @@ function Hero() {
         <div>
           <p
             className={`
-      mt-8
-      text-2xl
-      font-extralight
-      tracking-[6px]
-      font-serif
-      transform-gpu
-      will-change-transform
-      transition-[opacity,transform]
-      duration-[2200ms]
-      ease-[cubic-bezier(0.22,1,0.36,1)]
-      ${animate ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-16"}
-    `}
+              mt-8
+              text-2xl
+              font-extralight
+              tracking-[6px]
+              font-serif
+              transform-gpu
+              will-change-transform
+              transition-[opacity,transform]
+              duration-[2200ms]
+              ease-[cubic-bezier(0.22,1,0.36,1)]
+              ${animate ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-16"}
+            `}
           >
             Thư Mời Cưới
           </p>
@@ -72,7 +72,7 @@ function Hero() {
               ${animate ? "opacity-100 scale-100" : "opacity-0 scale-[0.15]"}
             `}
           >
-            Bảo Lộc & Thị Thel
+            Bảo Lộc &Thị Thel
           </p>
 
           {/* Thời gian + ngày cưới */}
@@ -97,19 +97,19 @@ function Hero() {
 
             <p
               className={`
-    text-4xl
-    tracking-[6px]
-    font-bold
-    font-cafeta
-    mb-7
-    transform-gpu
-    will-change-transform
-    transition-[transform,opacity]
-    duration-[2300ms]
-    ease-[cubic-bezier(0.22,1,0.36,1)]
-    delay-500
-    ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
-  `}
+                text-4xl
+                tracking-[6px]
+                font-bold
+                font-cafeta
+                mb-7
+                transform-gpu
+                will-change-transform
+                transition-[transform,opacity]
+                duration-[2300ms]
+                ease-[cubic-bezier(0.22,1,0.36,1)]
+                delay-300
+                ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
+              `}
             >
               02.09.2026
             </p>
