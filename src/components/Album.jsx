@@ -4,6 +4,7 @@ import useInViewOnce from "../hook/useInViewOnce.js";
 
 const Album = () => {
   const [images, setImages] = useState([]);
+  const { ref, show } = useInViewOnce(0.15);
 
   useEffect(() => {
     fetch(
@@ -13,11 +14,11 @@ const Album = () => {
       .then((data) => setImages(data));
   }, []);
 
-  const { ref, show } = useInViewOnce(0.1);
   return (
-    <section ref={ref} className="px-6 overflow-hidden">
+    <section className="px-6 overflow-hidden">
       <div className="flex items-center justify-between h-14 mt-5">
         <p
+          ref={ref}
           className={`
             font-ephesis 
             text-[32px] 
@@ -42,13 +43,13 @@ const Album = () => {
         </div>
       </div>
       <div className="bg-green-800 grid grid-cols-2 gap-3 p-3">
-        {images.map((img) => (
+        {[...images].reverse().map((img, index) => (
           <img
             key={img.id}
             src={img.url}
             alt={img.name}
             style={{
-              transitionDelay: `${img * 120}ms`,
+              transitionDelay: `${index * 200}ms`,
             }}
             className={`
               w-full
@@ -61,7 +62,7 @@ const Album = () => {
               ${
                 show
                   ? "opacity-100 translate-x-0"
-                  : img % 2 === 0
+                  : index % 2 === 0
                     ? "opacity-0 -translate-x-20"
                     : "opacity-0 translate-x-20"
               }

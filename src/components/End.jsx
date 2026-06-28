@@ -107,6 +107,7 @@ const End = () => {
             <Select
               size="large"
               placeholder="Chọn"
+              popupClassName="custom-select-dropdown"
               options={[
                 {
                   value: "Có",

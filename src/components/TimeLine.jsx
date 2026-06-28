@@ -227,8 +227,8 @@ const TimeLine = () => {
       </div>
 
       {/* Lịch */}
-      <div ref={calendar.ref} className="w-full px-6 pb-6">
-        <div className="flex justify-between items-center">
+      <div ref={calendar.ref} className="w-full px-6 pb-2">
+        <div className="flex justify-around gap-2 items-center">
           <p
             className={`
             text-[45px]
@@ -241,7 +241,7 @@ const TimeLine = () => {
             transition-[transform,opacity]
             duration-[5000ms]
             ease-[cubic-bezier(0.22,1,0.36,1)]
-            ${calendar.show ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}
+            ${calendar.show ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-16"}
             `}
           >
             Tháng 9
@@ -328,9 +328,8 @@ const TimeLine = () => {
         <p
           className={`
             font-pinyon 
-            text-4xl 
-            mt-5 
-            mb-3
+            text-4xl
+            my-3
             transform-gpu
             will-change-transform
             transition-[transform,opacity]
