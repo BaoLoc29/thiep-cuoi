@@ -231,7 +231,7 @@ const TimeLine = () => {
         <div className="flex justify-between items-center">
           <p
             className={`
-            text-5xl 
+            text-[45px]
             italic 
           text-green-800 
             font-pinyon 

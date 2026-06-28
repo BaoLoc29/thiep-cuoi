@@ -7,8 +7,9 @@ const Main = () => {
   const { ref, show } = useInViewOnce(0.2);
 
   return (
-    <section ref={ref} className="text-center overflow-hidden">
+    <section className="text-center overflow-hidden">
       <p
+      ref={ref}
         className={`
           font-pinyon
           text-xl
@@ -25,7 +26,7 @@ const Main = () => {
         Yêu người vừa ý, cưới người mình thương..."
       </p>
 
-      <div className="h-[19rem] gap-10 flex flex-col">
+      <div ref={ref} className="h-[19rem] gap-10 flex flex-col">
         {/* box 2 ông bà sui */}
         <div className="flex font-cafeta justify-around gap-2 text-lg px-2">
           {/* NHÀ TRAI */}
@@ -113,7 +114,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div className="flex bg-green-800 gap-3 p-3 relative z-10">
+      <div ref={ref} className="flex bg-green-800 gap-3 p-3 relative z-10">
         <div className="flex justify-center w-1/2">
           <img
             src={DSC_1}
