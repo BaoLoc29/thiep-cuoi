@@ -215,7 +215,7 @@ const End = () => {
             text-center
           "
         >
-          <p className="text-6xl font-amsterdam text-white drop-shadow-2xl tracking-[2px] mb-6">
+          <p className="text-6xl font-amsterdam text-white drop-shadow-2xl mb-6">
             Bảo Lộc &Thị Thel
           </p>
 

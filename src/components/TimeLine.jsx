@@ -119,8 +119,11 @@ const TimeLine = () => {
       </div>
       <div ref={ceremony.ref}>
         <div className="font-sans text-center py-5">
-          <p className="font-bold text-lg mb-0">TIỆC MỪNG LỄ THÀNH HÔN</p>
-          <p className="text-base font-medium mb-0">Vào lúc</p>
+          <p className="text-2xl font-cormorant font-bold tracking-[1px] uppercase mb-1">
+            Tiệc Mừng Lễ Thành Hôn
+          </p>
+
+          <p className="text-gray-500 italic text-xl mb-0">Vào lúc</p>
         </div>
         <div className="flex items-center w-full">
           <div className="flex-1 text-center">
@@ -133,6 +136,7 @@ const TimeLine = () => {
               will-change-transform
               transition-[transform,opacity]
               duration-[5000ms]
+              delay-500
               ease-[cubic-bezier(0.22,1,0.36,1)]
               ${ceremony.show ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}
               `}
@@ -141,7 +145,7 @@ const TimeLine = () => {
             </p>
           </div>
           <div className="h-24 w-px bg-gray-400"></div>
-          <div className="flex-1 text-center ">
+          <div className="flex-1 text-center">
             <p
               className={`
               text-lg 
@@ -151,6 +155,7 @@ const TimeLine = () => {
               will-change-transform
               transition-[opacity,transform]
               duration-[5000ms]
+              delay-500
               ease-[cubic-bezier(0.22,1,0.36,1)]
               ${ceremony.show ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8"}
             `}
@@ -168,6 +173,7 @@ const TimeLine = () => {
             will-change-transform
             transition-[transform,opacity]
             duration-[5000ms]
+            delay-500
             ease-[cubic-bezier(0.22,1,0.36,1)]
             origin-center
             ${ceremony.show ? "opacity-100 scale-100" : "opacity-0 scale-50"}
@@ -185,6 +191,7 @@ const TimeLine = () => {
               will-change-transform
               transition-[opacity,transform]
               duration-[5000ms]
+              delay-500
               ease-[cubic-bezier(0.22,1,0.36,1)]
               ${ceremony.show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
             `}
@@ -203,6 +210,7 @@ const TimeLine = () => {
               will-change-transform
               transition-[transform,opacity]
               duration-[5000ms]
+              delay-500
               ease-[cubic-bezier(0.22,1,0.36,1)]
               ${ceremony.show ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}
               `}
@@ -220,6 +228,7 @@ const TimeLine = () => {
           will-change-transform
           transition-[opacity,transform]
           duration-[5000ms]
+          delay-500
           ease-[cubic-bezier(0.22,1,0.36,1)]
           ${ceremony.show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
         `}
@@ -230,7 +239,7 @@ const TimeLine = () => {
 
       {/* Lịch */}
       <div ref={calendar.ref} className="w-full px-6 pb-2">
-        <div className="flex justify-between gap-2 items-center">
+        <div className="flex justify-between gap-4 items-center">
           <p
             className={`
             text-5xl
@@ -242,6 +251,7 @@ const TimeLine = () => {
             will-change-transform
             transition-[transform,opacity]
             duration-[5000ms]
+            delay-500
             ease-[cubic-bezier(0.22,1,0.36,1)]
             ${calendar.show ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-16"}
             `}
