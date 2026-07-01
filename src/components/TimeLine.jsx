@@ -1,5 +1,7 @@
 import React from "react";
-import DSC_1 from "../assets/images/DSC_4.jpg";
+import DSC_5027 from "../assets/images/DSC_5027.jpg";
+import DSC_4821 from "../assets/images/DSC_4821.jpg";
+import DSC_4325 from "../assets/images/DSC_4325.jpg";
 import heart from "../assets/images/heart.png";
 import endpicture from "../assets/images/pic.png";
 import useInViewOnce from "../hook/useInViewOnce.js";
@@ -61,8 +63,8 @@ const TimeLine = () => {
         <div className="flex gap-2 px-2 py-5 items-center">
           <div className="flex-1 justify-center">
             <img
-              src={DSC_1}
-              alt="chú rể"
+              src={DSC_5027}
+              alt="album 1"
               className={`
               w-full
               h-auto
@@ -78,8 +80,8 @@ const TimeLine = () => {
 
           <div className="flex-[1.2] justify-center">
             <img
-              src={DSC_1}
-              alt="cô dâu"
+              src={DSC_4325}
+              alt="album 2"
               className={`
               w-full
               h-auto
@@ -99,8 +101,8 @@ const TimeLine = () => {
 
           <div className="flex-1 justify-center">
             <img
-              src={DSC_1}
-              alt="cô dâu"
+              src={DSC_4821}
+              alt="album 3"
               className={`
               w-full
               h-auto
@@ -285,7 +287,7 @@ const TimeLine = () => {
                             -top-1
                             pointer-events-none
                             transition-opacity
-                            duration-[3000ms]
+                            duration-[5000ms]
                             ${calendar.show ? "opacity-100 animate-heartbeat" : "opacity-0"}
                           `}
                         />

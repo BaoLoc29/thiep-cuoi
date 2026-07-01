@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import DSC_1 from "../assets/images/DSC_4.jpg";
+import DSC_TOP from "../assets/images/DSC_TOP.jpg";
 
 function Hero() {
   const [animate, setAnimate] = useState(false);
@@ -15,7 +15,7 @@ function Hero() {
   return (
     <section className="relative overflow-hidden">
       {/* Ảnh */}
-      <img src={DSC_1} alt="Ảnh cưới" className="w-full h-auto block" />
+      <img src={DSC_TOP} alt="Ảnh cưới" className="w-full h-auto block" />
 
       {/* Gradient trắng */}
       <div

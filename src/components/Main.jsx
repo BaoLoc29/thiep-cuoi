@@ -1,6 +1,7 @@
 import React from "react";
 import heart from "../assets/images/heart.png";
-import DSC_1 from "../assets/images/DSC_4.jpg";
+import chure from "../assets/images/CHURE.jpg";
+import codau from "../assets/images/CODAU.jpg";
 import useInViewOnce from "../hook/useInViewOnce.js";
 
 const Main = () => {
@@ -115,13 +116,17 @@ const Main = () => {
         </div>
       </div>
       <div ref={ref} className="flex bg-green-800 gap-3 p-3 relative z-10">
-        <div className="flex justify-center w-1/2">
+        <div className="flex justify-center w-1/2 overflow-hidden">
           <img
-            src={DSC_1}
+            src={chure}
             alt="chú rể"
             className={`
               w-full
               h-auto
+              object-cover
+              object-center
+              scale-[1.1]
+              origin-bottom
               transform-gpu
               will-change-transform
               transition-[transform,opacity]
@@ -134,8 +139,8 @@ const Main = () => {
 
         <div className="flex justify-center w-1/2">
           <img
-            src={DSC_1}
-            alt="chú rể"
+            src={codau}
+            alt="codau"
             className={`
               w-full
               h-auto

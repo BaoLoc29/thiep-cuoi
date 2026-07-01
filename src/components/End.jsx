@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DSC_1 from "../assets/images/DSC_4.jpg";
+import DSC_BOTTOM from "../assets/images/DSC_BOTTOM.jpg";
 
 import { Form, Input, Select, InputNumber, Modal } from "antd";
 
@@ -200,15 +200,15 @@ const End = () => {
       </Modal>
 
       <div className="relative overflow-hidden mt-6">
-        <img src={DSC_1} alt="chú rể" className="w-full h-auto block" />
+        <img src={DSC_BOTTOM} alt="chú rể" className="w-full h-auto block" />
 
         {/* Nội dung */}
         <div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 w-[80%] text-center bg-white/10
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 w-[85%] text-center bg-white/10
     backdrop-blur-md"
         >
-          <p className="text-6xl font-amsterdam text-white mb-2 drop-shadow-lg">
-            Bảo Lộc & Thị Thel
+          <p className="text-6xl font-amsterdam text-white mb-2 drop-shadow-lg tracking-[2px]">
+            Bảo Lộc &Thị Thel
           </p>
 
           <p className="text-4xl font-ephesis text-white mb-0 drop-shadow-lg">

@@ -8,7 +8,7 @@ const Album = () => {
 
   useEffect(() => {
     fetch(
-      "https://script.google.com/macros/s/AKfycbzJ7cNS-_ZHTPJfSSz3nSSDN_ztcfcBfqV7dkEj6m61mtMuvGthtgaksbi5sPtnpmmV/exec",
+      "https://script.google.com/macros/s/AKfycbzXXoRngKmDp8tvwhgGZzy-ai9WAm1WhyIs0tH3xVe_HmZ8v9PaTokmy5ox6yTjbGAn/exec",
     )
       .then((res) => res.json())
       .then((data) => setImages(data));
@@ -42,7 +42,7 @@ const Album = () => {
           />
         </div>
       </div>
-      <div className="bg-green-800 grid grid-cols-2 gap-3 p-3">
+      <div className="bg-green-50 grid grid-cols-2 gap-3 p-3">
         {[...images].reverse().map((img, index) => (
           <img
             key={img.id}
