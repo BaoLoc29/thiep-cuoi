@@ -9,7 +9,7 @@ const Main = () => {
   return (
     <section className="text-center overflow-hidden">
       <p
-      ref={ref}
+        ref={ref}
         className={`
           font-pinyon
           text-xl
@@ -71,13 +71,13 @@ const Main = () => {
           <img
             src={heart}
             alt="Heart"
-            className="absolute top-[50rem] w-40 h-40 show-heartbeat"
+            className="absolute top-[50rem] w-40 h-40 animate-heartbeat"
           />
         </div>
         {/* box cô dâu & chú rể */}
         <div className="flex justify-around gap-2 relative z-0">
           <div>
-            <p className="mb-2 font-cormorant text-xl">CHÚ RỂ</p>
+            <p className="mb-2 font-cormorant text-xl">ÚT NAM</p>
             <p
               className={`
                 text-[55px]
@@ -95,7 +95,7 @@ const Main = () => {
             </p>
           </div>
           <div>
-            <p className="mb-2 font-cormorant text-xl">CÔ DÂU</p>
+            <p className="mb-2 font-cormorant text-xl">TRƯỞNG NỮ</p>
             <p
               className={`
                 text-[55px]

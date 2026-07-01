@@ -231,7 +231,7 @@ const TimeLine = () => {
         <div className="flex justify-around gap-2 items-center">
           <p
             className={`
-            text-[45px]
+            text-[40px]
             italic 
           text-green-800 
             font-pinyon 
@@ -279,7 +279,15 @@ const TimeLine = () => {
                         <img
                           src={heart}
                           alt="Heart"
-                          className="absolute h-16 -top-1 calendar.show-heartbeat pointer-events-none"
+                          className={`
+                            absolute
+                            h-16
+                            -top-1
+                            pointer-events-none
+                            transition-opacity
+                            duration-[3000ms]
+                            ${calendar.show ? "opacity-100 animate-heartbeat" : "opacity-0"}
+                          `}
                         />
 
                         <span

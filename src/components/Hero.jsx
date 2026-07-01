@@ -46,7 +46,7 @@ function Hero() {
               transform-gpu
               will-change-transform
               transition-[opacity,transform]
-              duration-[2200ms]
+              duration-[5000ms]
               ease-[cubic-bezier(0.22,1,0.36,1)]
               ${animate ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-16"}
             `}
@@ -66,7 +66,7 @@ function Hero() {
               transform-gpu
               will-change-transform
               transition-[transform,opacity]
-              duration-[2600ms]
+              duration-[5000ms]
               ease-[cubic-bezier(0.22,1,0.36,1)]
               origin-center
               ${animate ? "opacity-100 scale-100" : "opacity-0 scale-[0.15]"}
@@ -82,11 +82,11 @@ function Hero() {
                 text-3xl
                 font-cafeta
                 font-medium
-                mb-0
+                mb-2
                 transform-gpu
                 will-change-transform
                 transition-[transform,opacity]
-                duration-[2300ms]
+                duration-[5000ms]
                 ease-[cubic-bezier(0.22,1,0.36,1)]
                 delay-300
                 ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
@@ -105,9 +105,8 @@ function Hero() {
                 transform-gpu
                 will-change-transform
                 transition-[transform,opacity]
-                duration-[2300ms]
+                duration-[5000ms]
                 ease-[cubic-bezier(0.22,1,0.36,1)]
-                delay-300
                 ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
               `}
             >
