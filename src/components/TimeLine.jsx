@@ -11,7 +11,7 @@ const TimeLine = () => {
 
   const ceremony = useInViewOnce(0.2);
 
-  const calendar = useInViewOnce(0.1);
+  const calendar = useInViewOnce(0.6);
 
   const days = [
     ["", 1, 2, 3, 4, 5, 6],
@@ -239,7 +239,7 @@ const TimeLine = () => {
 
       {/* Lịch */}
       <div ref={calendar.ref} className="w-full px-6 pb-2">
-        <div className="flex justify-between gap-4 items-center">
+        <div className="flex justify-between items-center">
           <p
             className={`
             text-5xl
