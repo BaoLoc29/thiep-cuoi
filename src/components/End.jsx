@@ -202,23 +202,31 @@ const End = () => {
       <div className="relative overflow-hidden mt-6">
         <img src={DSC_BOTTOM} alt="chú rể" className="w-full h-auto block" />
 
-        {/* Nội dung */}
         <div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 w-[85%] text-center bg-white/10
-    backdrop-blur-md"
+          className="
+            absolute bottom-8 left-1/2 -translate-x-1/2
+            w-[85%]
+            p-6
+            rounded-2xl
+          bg-black/20
+            backdrop-blur-md
+            border border-white/20
+            shadow-2xl
+            text-center
+          "
         >
-          <p className="text-6xl font-amsterdam text-white mb-2 drop-shadow-lg tracking-[2px]">
+          <p className="text-6xl font-amsterdam text-white drop-shadow-2xl tracking-[2px] mb-6">
             Bảo Lộc &Thị Thel
           </p>
 
-          <p className="text-4xl font-ephesis text-white mb-0 drop-shadow-lg">
+          <p className="text-3xl font-ephesis text-white drop-shadow-lg mb-6 tracking-[2px]">
             Thank You !!!
           </p>
 
-          <div className="w-40 h-px bg-white/70 mx-auto my-3"></div>
+          <div className="w-32 h-[2px] bg-gradient-to-r from-transparent via-white to-transparent mx-auto my-4"></div>
 
-          <p className="text-white tracking-[4px] uppercase text-xs">
-            02.09.2026
+          <p className="text-white uppercase tracking-[6px] text-base mb-0 font-pinyon font-bold">
+            02 • 09 • 2026
           </p>
         </div>
       </div>

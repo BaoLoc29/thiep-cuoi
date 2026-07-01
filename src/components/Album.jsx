@@ -1,6 +1,8 @@
 import album from "../assets/images/album.png";
 import React, { useState, useEffect } from "react";
 import useInViewOnce from "../hook/useInViewOnce.js";
+import { PhotoProvider, PhotoView } from "react-photo-view";
+import "react-photo-view/dist/react-photo-view.css";
 
 const Album = () => {
   const [images, setImages] = useState([]);
@@ -42,16 +44,18 @@ const Album = () => {
           />
         </div>
       </div>
-      <div className="bg-green-50 grid grid-cols-2 gap-3 p-3">
-        {[...images].reverse().map((img, index) => (
-          <img
-            key={img.id}
-            src={img.url}
-            alt={img.name}
-            style={{
-              transitionDelay: `${index * 200}ms`,
-            }}
-            className={`
+      <PhotoProvider>
+        <div className="bg-green-100 grid grid-cols-2 gap-3 p-3">
+          {[...images].reverse().map((img, index) => (
+            <PhotoView key={img.id} src={img.url}>
+              <img
+                key={img.id}
+                src={img.url}
+                alt={img.name}
+                style={{
+                  transitionDelay: `${index * 250}ms`,
+                }}
+                className={`
               w-full
               h-auto
               transform-gpu
@@ -67,9 +71,11 @@ const Album = () => {
                     : "opacity-0 translate-x-20"
               }
             `}
-          />
-        ))}
-      </div>
+              />
+            </PhotoView>
+          ))}
+        </div>
+      </PhotoProvider>
     </section>
   );
 };

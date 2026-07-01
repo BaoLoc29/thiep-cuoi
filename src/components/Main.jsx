@@ -5,7 +5,7 @@ import codau from "../assets/images/CODAU.jpg";
 import useInViewOnce from "../hook/useInViewOnce.js";
 
 const Main = () => {
-  const { ref, show } = useInViewOnce(0.2);
+  const { ref, show } = useInViewOnce(0.1);
 
   return (
     <section className="text-center overflow-hidden">
@@ -115,7 +115,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div ref={ref} className="flex bg-green-800 gap-3 p-3 relative z-10">
+      <div ref={ref} className="flex bg-green-100 gap-3 p-3 relative z-10">
         <div className="flex justify-center w-1/2 overflow-hidden">
           <img
             src={chure}
