@@ -242,7 +242,7 @@ const TimeLine = () => {
         <div className="flex items-end">
           <p
             className={`
-            text-5xl
+            text-4xl
             italic 
           text-green-800 
             font-pinyon 
