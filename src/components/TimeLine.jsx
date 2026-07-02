@@ -244,7 +244,6 @@ const TimeLine = () => {
             className={`
             w-[46%]
             text-5xl
-            italic 
           text-green-800 
             font-pinyon 
             mb-2
