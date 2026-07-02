@@ -242,13 +242,12 @@ const TimeLine = () => {
         <div className="flex items-end justify-between">
           <p
             className={`
-            flex-1
+            w-[46%]
             text-5xl
             italic 
           text-green-800 
             font-pinyon 
             mb-2
-            mr-4
             transform-gpu
             will-change-transform
             transition-[transform,opacity]
@@ -259,7 +258,7 @@ const TimeLine = () => {
           >
             Tháng 9
           </p>
-          <p className="text-7xl font-black text-green-800 font-sans mb-1">
+          <p className="text-7xl shrink-0 font-black text-green-800 font-sans mb-1">
             2026
           </p>
         </div>
