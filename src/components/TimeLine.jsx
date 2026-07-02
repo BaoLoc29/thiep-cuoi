@@ -11,7 +11,7 @@ const TimeLine = () => {
 
   const ceremony = useInViewOnce(0.2);
 
-  const calendar = useInViewOnce(0.6);
+  const calendar = useInViewOnce(0.4);
 
   const days = [
     ["", 1, 2, 3, 4, 5, 6],
@@ -123,7 +123,7 @@ const TimeLine = () => {
             Tiệc Mừng Lễ Thành Hôn
           </p>
 
-          <p className="text-gray-500 italic text-xl mb-0">Vào lúc</p>
+          <p className="italic text-xl mb-0">Vào lúc</p>
         </div>
         <div className="flex items-center w-full">
           <div className="flex-1 text-center">
@@ -239,14 +239,15 @@ const TimeLine = () => {
 
       {/* Lịch */}
       <div ref={calendar.ref} className="w-full px-6 pb-2">
-        <div className="flex justify-between items-center gap-4">
+        <div className="flex items-end">
           <p
             className={`
             text-5xl
             italic 
           text-green-800 
             font-pinyon 
-            mb-0
+            mb-2
+            mr-6
             transform-gpu
             will-change-transform
             transition-[transform,opacity]

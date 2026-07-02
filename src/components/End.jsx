@@ -43,11 +43,11 @@ const End = () => {
 
   return (
     <section className="relative p-6">
-      <div className="flex flex-col gap-4 text-center py-6">
+      <div className="flex flex-col gap-4 text-center pb-6">
         <span className="text-2xl font-cormorant uppercase">
           Bạn sẽ đến chứ?
         </span>
-        <span className="text-xl font-cormorant">
+        <span className="text-lg font-cormorant">
           Chúng tôi rất mong được đón tiếp bạn trong ngày trọng đại. Sự hiện
           diện của bạn là niềm vui và hạnh phúc đối với gia đình chúng tôi.
         </span>

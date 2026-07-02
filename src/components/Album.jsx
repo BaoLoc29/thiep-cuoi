@@ -18,7 +18,7 @@ const Album = () => {
 
   return (
     <section className="px-6 overflow-hidden">
-      <div className="flex items-center justify-between h-14 mt-5">
+      <div className="flex items-center justify-between h-14 my-2">
         <p
           ref={ref}
           className={`
@@ -40,7 +40,7 @@ const Album = () => {
           <img
             src={album}
             alt="Album"
-            className="absolute inset-0 w-[510px] h-full max-w-none object-cover object-center"
+            className="absolute inset-0 w-[460px] h-full max-w-none object-cover object-center"
           />
         </div>
       </div>
