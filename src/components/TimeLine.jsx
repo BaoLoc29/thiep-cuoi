@@ -239,10 +239,10 @@ const TimeLine = () => {
 
       {/* Lịch */}
       <div ref={calendar.ref} className="w-full px-6 pb-2">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center gap-4">
           <p
             className={`
-            text-xl
+            text-5xl
             italic 
           text-green-800 
             font-pinyon 
@@ -251,7 +251,6 @@ const TimeLine = () => {
             will-change-transform
             transition-[transform,opacity]
             duration-[5000ms]
-            delay-500
             ease-[cubic-bezier(0.22,1,0.36,1)]
             ${calendar.show ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-16"}
             `}
