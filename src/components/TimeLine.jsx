@@ -21,15 +21,12 @@ const TimeLine = () => {
     [28, 29, 30, "", "", "", ""],
   ];
   return (
-    <section
-      ref={invite.ref}
-      className="text-center flex flex-col justify-center items-center overflow-hidden"
-    >
-      <div ref={invite.ref}>
-        <div className="w-[220px] pt-5 my-0 mx-auto">
-          <div className="border-t-2 border-gray-950"></div>
-          <p
-            className={`
+    <section className="text-center flex flex-col justify-center items-center overflow-hidden">
+      <div className="w-[220px] pt-5 my-0 mx-auto">
+        <div className="border-t-2 border-gray-950"></div>
+        <p
+          ref={invite.ref}
+          className={`
             text-center
             font-pinyon
             text-5xl
@@ -41,12 +38,12 @@ const TimeLine = () => {
             ease-[cubic-bezier(0.22,1,0.36,1)]
             ${invite.show ? "opacity-100 scale-100" : "opacity-0 scale-50"}
           `}
-          >
-            Thiệp mời
-          </p>
-        </div>
-        <p
-          className={`
+        >
+          Thiệp mời
+        </p>
+      </div>
+      <p
+        className={`
           font-cormorant
           text-lg
           mb-0
@@ -57,15 +54,15 @@ const TimeLine = () => {
           ease-[cubic-bezier(0.22,1,0.36,1)]
           ${invite.show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
         `}
-        >
-          THAM DỰ LỄ CƯỚI BẢO LỘC & THỊ THEL
-        </p>
-        <div className="flex gap-2 px-2 py-5 items-center">
-          <div className="flex-1 justify-center">
-            <img
-              src={DSC_5027}
-              alt="album 1"
-              className={`
+      >
+        THAM DỰ LỄ CƯỚI BẢO LỘC & THỊ THEL
+      </p>
+      <div className="flex gap-2 px-2 py-5 items-center">
+        <div className="flex-1 justify-center">
+          <img
+            src={DSC_5027}
+            alt="album 1"
+            className={`
               w-full
               h-auto
               transform-gpu
@@ -75,14 +72,14 @@ const TimeLine = () => {
               ease-[cubic-bezier(0.22,1,0.36,1)]
               ${invite.show ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}
             `}
-            />
-          </div>
+          />
+        </div>
 
-          <div className="flex-[1.2] justify-center">
-            <img
-              src={DSC_4325}
-              alt="album 2"
-              className={`
+        <div className="flex-[1.2] justify-center">
+          <img
+            src={DSC_4325}
+            alt="album 2"
+            className={`
               w-full
               h-auto
               transform-gpu
@@ -96,14 +93,14 @@ const TimeLine = () => {
                   : "opacity-0 translate-y-10 scale-95"
               }
             `}
-            />
-          </div>
+          />
+        </div>
 
-          <div className="flex-1 justify-center">
-            <img
-              src={DSC_4821}
-              alt="album 3"
-              className={`
+        <div className="flex-1 justify-center">
+          <img
+            src={DSC_4821}
+            alt="album 3"
+            className={`
               w-full
               h-auto
               transform-gpu
@@ -113,8 +110,7 @@ const TimeLine = () => {
               ease-[cubic-bezier(0.22,1,0.36,1)]
               ${invite.show ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"}
             `}
-            />
-          </div>
+          />
         </div>
       </div>
       <div ref={ceremony.ref}>
