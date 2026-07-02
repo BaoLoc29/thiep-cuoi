@@ -239,15 +239,16 @@ const TimeLine = () => {
 
       {/* Lịch */}
       <div ref={calendar.ref} className="w-full px-6 pb-2">
-        <div className="flex items-end">
+        <div className="flex items-end justify-between">
           <p
             className={`
-            text-4xl
+            flex-1
+            text-5xl
             italic 
           text-green-800 
             font-pinyon 
             mb-2
-            mr-6
+            mr-4
             transform-gpu
             will-change-transform
             transition-[transform,opacity]
