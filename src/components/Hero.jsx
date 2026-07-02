@@ -88,7 +88,6 @@ function Hero() {
                 transition-[transform,opacity]
                 duration-[5000ms]
                 ease-[cubic-bezier(0.22,1,0.36,1)]
-                delay-300
                 ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
               `}
             >

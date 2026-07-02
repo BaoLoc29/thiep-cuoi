@@ -7,11 +7,11 @@ import endpicture from "../assets/images/pic.png";
 import useInViewOnce from "../hook/useInViewOnce.js";
 
 const TimeLine = () => {
-  const invite = useInViewOnce(0.2);
+  const invite = useInViewOnce(0.3);
 
-  const ceremony = useInViewOnce(0.2);
+  const ceremony = useInViewOnce(0.25);
 
-  const calendar = useInViewOnce(0.4);
+  const calendar = useInViewOnce(0.3);
 
   const days = [
     ["", 1, 2, 3, 4, 5, 6],
