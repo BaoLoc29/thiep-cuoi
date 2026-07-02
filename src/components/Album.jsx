@@ -18,12 +18,12 @@ const Album = () => {
 
   return (
     <section className="px-6 overflow-hidden">
-      <div className="flex items-center justify-between h-14 my-2">
+      <div className="flex items-center justify-between h-14 mt-2">
         <p
           ref={ref}
           className={`
             font-ephesis 
-            text-[32px] 
+            text-3xl
             mb-0
             transform-gpu
             will-change-transform
