@@ -206,7 +206,7 @@ const End = () => {
           className="
             absolute bottom-8 left-1/2 -translate-x-1/2
             w-4/5
-            p-4
+            py-4
             rounded-2xl
           bg-black/20
             backdrop-blur-md

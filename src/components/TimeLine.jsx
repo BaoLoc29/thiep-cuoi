@@ -45,7 +45,7 @@ const TimeLine = () => {
       <p
         className={`
           font-cormorant
-          text-lg
+          text-base
           mb-0
           transform-gpu
           will-change-transform
@@ -237,7 +237,7 @@ const TimeLine = () => {
         <div className="flex items-end justify-between">
           <p
             className={`
-            w-[46%]
+            // w-[46%]
             text-5xl
           text-green-800 
             font-pinyon 
