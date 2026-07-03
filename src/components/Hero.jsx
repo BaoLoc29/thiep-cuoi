@@ -33,7 +33,7 @@ function Hero() {
       />
 
       {/* Nội dung */}
-      <div className="absolute inset-0 flex flex-col justify-between text-center text-gray-900">
+      <div className="absolute inset-0 flex flex-col justify-between text-center text-gray-900 px-4">
         {/* Thư Mời Cưới */}
         <div>
           <p

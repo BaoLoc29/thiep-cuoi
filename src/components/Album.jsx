@@ -17,7 +17,7 @@ const Album = () => {
   }, []);
 
   return (
-    <section className="px-6 overflow-hidden">
+    <section className="px-4 overflow-hidden">
       <div className="flex items-center justify-between h-14 mt-2">
         <p
           ref={ref}

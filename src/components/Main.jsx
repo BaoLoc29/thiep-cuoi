@@ -8,13 +8,12 @@ const Main = () => {
   const { ref, show } = useInViewOnce(0.35);
 
   return (
-    <section className="text-center overflow-hidden">
+    <section className="text-center overflow-hidden px-4">
       <p
         ref={ref}
         className={`
           font-pinyon
           text-xl
-          px-4
           transform-gpu
           will-change-transform
           transition-[opacity,transform]
@@ -27,9 +26,9 @@ const Main = () => {
         Yêu người vừa ý, cưới người mình thương..."
       </p>
 
-      <div ref={ref} className="h-[19rem] gap-10 flex flex-col">
+      <div ref={ref} className="relative h-80 flex flex-col justify-between">
         {/* box 2 ông bà sui */}
-        <div className="flex font-cafeta justify-around gap-2 text-lg px-2">
+        <div className="flex font-cafeta justify-between text-lg">
           {/* NHÀ TRAI */}
           <div
             className={`
@@ -68,15 +67,13 @@ const Main = () => {
             </p>
           </div>
         </div>
-        <div className="flex justify-center items-center">
-          <img
-            src={heart}
-            alt="Heart"
-            className="absolute top-[50rem] w-40 h-40 animate-heartbeat"
-          />
-        </div>
+        <img
+          src={heart}
+          alt="Heart"
+          className="absolute top-[50rem] w-40 h-40 animate-heartbeat"
+        />
         {/* box cô dâu & chú rể */}
-        <div className="flex justify-around gap-2 relative z-0">
+        <div className="relative z-20 flex justify-between">
           <div>
             <p className="mb-2 font-cormorant text-xl">ÚT NAM</p>
             <p
@@ -115,7 +112,10 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div ref={ref} className="flex bg-green-100 gap-3 p-3 relative z-10">
+      <div
+        ref={ref}
+        className="relative z-20 flex justify-between bg-green-100"
+      >
         <div className="flex justify-center w-1/2 overflow-hidden">
           <img
             src={chure}

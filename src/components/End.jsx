@@ -42,7 +42,7 @@ const End = () => {
   };
 
   return (
-    <section className="relative p-6">
+    <section className="relative py-6 px-4">
       <div className="flex flex-col gap-4 text-center pb-6">
         <span className="text-2xl font-cormorant uppercase">
           Bạn sẽ đến chứ?
@@ -205,8 +205,8 @@ const End = () => {
         <div
           className="
             absolute bottom-8 left-1/2 -translate-x-1/2
-            w-[85%]
-            p-6
+            w-4/5
+            p-4
             rounded-2xl
           bg-black/20
             backdrop-blur-md

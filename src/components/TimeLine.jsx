@@ -21,7 +21,7 @@ const TimeLine = () => {
     [28, 29, 30, "", "", "", ""],
   ];
   return (
-    <section className="text-center flex flex-col justify-center items-center overflow-hidden">
+    <section className="text-center flex flex-col justify-center items-center overflow-hidden px-4">
       <div className="w-[220px] pt-5 my-0 mx-auto">
         <div className="border-t-2 border-gray-950"></div>
         <p
@@ -57,7 +57,7 @@ const TimeLine = () => {
       >
         THAM DỰ LỄ CƯỚI BẢO LỘC & THỊ THEL
       </p>
-      <div className="flex gap-2 px-2 py-5 items-center">
+      <div className="flex gap-2 py-5 items-center">
         <div className="flex-1 justify-center">
           <img
             src={DSC_5027}
@@ -218,8 +218,7 @@ const TimeLine = () => {
         <div
           className={`
           text-base 
-          italic 
-          py-2
+          italic
           transform-gpu
           will-change-transform
           transition-[opacity,transform]
@@ -234,7 +233,7 @@ const TimeLine = () => {
       </div>
 
       {/* Lịch */}
-      <div ref={calendar.ref} className="w-full px-6 pb-2">
+      <div ref={calendar.ref} className="w-full pb-2">
         <div className="flex items-end justify-between">
           <p
             className={`
