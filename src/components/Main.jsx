@@ -25,7 +25,7 @@ const Main = () => {
         Yêu người vừa ý, cưới người mình thương..."
       </p>
 
-      <div className="relative flex flex-col pb-4">
+      <div className="relative flex flex-col pb-2">
         {/* box 2 ông bà sui */}
         <div className="w-full flex justify-between">
           {/* NHÀ TRAI */}
@@ -75,7 +75,7 @@ const Main = () => {
           <img
             src={heart}
             alt="heart"
-            className="absolute -top-8 w-36 animate-heartbeat"
+            className="absolute -top-4 w-36 animate-heartbeat"
           />
         </div>
 
