@@ -26,9 +26,9 @@ const Main = () => {
         Yêu người vừa ý, cưới người mình thương..."
       </p>
 
-      <div ref={ref} className="relative h-80 flex flex-col justify-between">
+      <div ref={ref} className="relative flex flex-col pb-4">
         {/* box 2 ông bà sui */}
-        <div className="flex font-cafeta justify-between text-lg">
+        <div className="w-full flex justify-between">
           {/* NHÀ TRAI */}
           <div
             className={`
@@ -40,9 +40,13 @@ const Main = () => {
               ${show ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-28"}
             `}
           >
-            <p className="mb-2">NHÀ TRAI</p>
-            <p className="mb-0 uppercase">Ông Trần Văn Phúc</p>
-            <p className="mb-0 uppercase">Bà Nguyễn Thị Mỹ Dung</p>
+            <p className="mb-2 font-cafeta text-lg">NHÀ TRAI</p>
+            <p className="mb-0 uppercase font-cafeta text-lg">
+              Ông Trần Văn Phúc
+            </p>
+            <p className="mb-0 uppercase font-cafeta text-lg">
+              Bà Nguyễn Thị Mỹ Dung
+            </p>
             <p className="mb-0 font-mono text-sm tracking-[1px]">
               Phú Lâm, An Giang
             </p>
@@ -59,21 +63,21 @@ const Main = () => {
               ${show ? "opacity-100 translate-x-0" : "opacity-0 translate-x-28"}
             `}
           >
-            <p className="mb-2">NHÀ GÁI</p>
-            <p className="mb-0 uppercase">Ông Lâm Khươl</p>
-            <p className="mb-0 uppercase">Bà Lý Thị Thủy</p>
+            <p className="mb-2 font-cafeta text-lg">NHÀ GÁI</p>
+            <p className="mb-0 uppercase font-cafeta text-lg">Ông Lâm Khươl</p>
+            <p className="mb-0 uppercase font-cafeta text-lg">Bà Lý Thị Thủy</p>
             <p className="mb-0 font-mono text-sm tracking-[1px]">
               Vĩnh Hải, Cần Thơ
             </p>
           </div>
         </div>
-        <img
-          src={heart}
-          alt="Heart"
-          className="absolute top-[50rem] w-40 h-40 animate-heartbeat"
-        />
+
+        <div ref={ref} className="flex justify-center -my-10 z-10">
+          <img src={heart} alt="heart" className="w-40 animate-heartbeat" />
+        </div>
+
         {/* box cô dâu & chú rể */}
-        <div className="relative z-20 flex justify-between">
+        <div className="w-full flex justify-between gap-2">
           <div>
             <p className="mb-2 font-cormorant text-xl">ÚT NAM</p>
             <p
@@ -112,10 +116,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div
-        ref={ref}
-        className="relative z-20 flex justify-between bg-green-100"
-      >
+      <div ref={ref} className="flex bg-green-100 gap-3 p-3">
         <div className="flex justify-center w-1/2 overflow-hidden">
           <img
             src={chure}
