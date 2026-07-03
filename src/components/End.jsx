@@ -42,7 +42,7 @@ const End = () => {
   };
 
   return (
-    <section className="relative py-6 px-4">
+    <section className="relative pt-6 px-4">
       <div className="flex flex-col gap-4 text-center pb-6">
         <span className="text-2xl font-cormorant uppercase">
           Bạn sẽ đến chứ?
