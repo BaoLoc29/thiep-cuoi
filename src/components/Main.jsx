@@ -120,17 +120,13 @@ const Main = () => {
         </div>
       </div>
       <div className="flex bg-green-100 gap-3 p-3">
-        <div className="flex justify-center w-1/2 overflow-hidden">
+        <div className="flex justify-center w-1/2">
           <img
             src={chure}
             alt="chú rể"
             className={`
               w-full
               h-auto
-              object-cover
-              object-center
-              scale-[1.1]
-              origin-bottom
               transform-gpu
               will-change-transform
               transition-[transform,opacity]
