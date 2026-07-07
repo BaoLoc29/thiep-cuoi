@@ -46,16 +46,18 @@ const Album = () => {
       </div>
       <PhotoProvider>
         <div className="bg-green-100 grid grid-cols-2 gap-3 p-3">
-          {[...images].reverse().map((img, index) => (
-            <PhotoView key={img.id} src={img.url}>
-              <img
-                key={img.id}
-                src={img.url}
-                alt={img.name}
-                style={{
-                  transitionDelay: `${index * 250}ms`,
-                }}
-                className={`
+          {[...images]
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map((img, index) => (
+              <PhotoView key={img.id} src={img.url}>
+                <img
+                  key={img.id}
+                  src={img.url}
+                  alt={img.name}
+                  style={{
+                    transitionDelay: `${index * 250}ms`,
+                  }}
+                  className={`
               w-full
               h-auto
               transform-gpu
@@ -71,9 +73,9 @@ const Album = () => {
                     : "opacity-0 translate-x-20"
               }
             `}
-              />
-            </PhotoView>
-          ))}
+                />
+              </PhotoView>
+            ))}
         </div>
       </PhotoProvider>
     </section>
