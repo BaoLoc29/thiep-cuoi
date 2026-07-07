@@ -22,14 +22,13 @@ const TimeLine = () => {
   ];
   return (
     <section className="text-center flex flex-col justify-center items-center overflow-hidden px-4">
-      <div className="w-[220px] pt-5 my-0 mx-auto">
-        <div className="border-t-2 border-gray-950"></div>
+      <div className="w-[280px] pt-5 my-0 mx-auto">
         <p
           ref={invite.ref}
           className={`
             text-center
             font-pinyon
-            text-5xl
+            text-3xl
             my-5
             transform-gpu
             will-change-transform
@@ -39,8 +38,10 @@ const TimeLine = () => {
             ${invite.show ? "opacity-100 scale-100" : "opacity-0 scale-50"}
           `}
         >
-          Thiệp mời
+          Trân Trọng Kính Mời
         </p>
+        <p className="text-xl">Quý Gia Đình</p>
+        <div className="border-t-2 border-gray-950"></div>
       </div>
       <p
         className={`
