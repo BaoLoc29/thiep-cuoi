@@ -5,26 +5,10 @@ import codau from "../assets/images/CODAU.jpg";
 import useInViewOnce from "../hook/useInViewOnce.js";
 
 const Main = () => {
-  const { ref, show } = useInViewOnce(0.35);
+  const { ref, show } = useInViewOnce(0.4);
 
   return (
     <section ref={ref} className="text-center overflow-hidden px-4">
-      <p
-        className={`
-          font-pinyon
-          text-xl
-          transform-gpu
-          will-change-transform
-          transition-[opacity,transform]
-          duration-[5000ms]
-          ease-[cubic-bezier(0.22,1,0.36,1)]
-          ${show ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-16"}
-        `}
-      >
-        "Hôn nhân là chuyện cả đời, <br></br>
-        Yêu người vừa ý, cưới người mình thương..."
-      </p>
-
       <div className="relative flex flex-col pb-2">
         {/* box 2 ông bà sui */}
         <div className="w-full flex justify-between">
@@ -93,7 +77,7 @@ const Main = () => {
                 transition-[transform,opacity]
                 duration-[5000ms]
                 ease-[cubic-bezier(0.22,1,0.36,1)]
-                ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-28"}
+                ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
               `}
             >
               Trần Bảo Lộc
@@ -111,7 +95,7 @@ const Main = () => {
                 transition-[transform,opacity]
                 duration-[5000ms]
                 ease-[cubic-bezier(0.22,1,0.36,1)]
-                ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-28"}
+                ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
               `}
             >
               Lâm Thị Thel

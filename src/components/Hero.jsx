@@ -55,10 +55,11 @@ function Hero() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-2">
-          {/* Tên cô dâu chú rể */}
-          <p
-            className={`
+        <div>
+          <div className="flex flex-col gap-2">
+            {/* Tên cô dâu chú rể */}
+            <p
+              className={`
               font-amsterdam
               text-7xl
               mb-0
@@ -71,14 +72,14 @@ function Hero() {
               origin-center
               ${animate ? "opacity-100 scale-100" : "opacity-0 scale-[0.15]"}
             `}
-          >
-            Bảo Lộc &Thị Thel
-          </p>
+            >
+              Bảo Lộc &Thị Thel
+            </p>
 
-          {/* Thời gian + ngày cưới */}
-          <div>
-            <p
-              className={`
+            {/* Thời gian + ngày cưới */}
+            <div>
+              <p
+                className={`
                 text-3xl
                 font-cafeta
                 font-medium
@@ -90,12 +91,12 @@ function Hero() {
                 ease-[cubic-bezier(0.22,1,0.36,1)]
                 ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
               `}
-            >
-              09:30 | Thứ Tư
-            </p>
+              >
+                09:30 | Thứ Tư
+              </p>
 
-            <p
-              className={`
+              <p
+                className={`
                 text-4xl
                 tracking-[6px]
                 font-bold
@@ -108,10 +109,28 @@ function Hero() {
                 ease-[cubic-bezier(0.22,1,0.36,1)]
                 ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
               `}
-            >
-              02.09.2026
-            </p>
+              >
+                02.09.2026
+              </p>
+            </div>
           </div>
+          <p
+            className={`
+          font-pinyon
+          text-xl
+          tracking-[1px]
+          transform-gpu
+          will-change-transform
+          transition-[opacity,transform]
+          duration-[5000ms]
+          delay-500
+          ease-[cubic-bezier(0.22,1,0.36,1)]
+          ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
+        `}
+          >
+            "Hôn nhân là chuyện cả đời, <br></br>
+            Yêu người vừa ý, cưới người mình thương..."
+          </p>
         </div>
       </div>
     </section>

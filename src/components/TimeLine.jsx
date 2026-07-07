@@ -21,15 +21,12 @@ const TimeLine = () => {
     [28, 29, 30, "", "", "", ""],
   ];
   return (
-    <section className="text-center flex flex-col justify-center items-center overflow-hidden px-4">
-      <div className="w-[280px] pt-5 my-0 mx-auto">
+    <section className="text-center flex flex-col justify-center items-center overflow-hidden p-4">
+      <div className="flex flex-col gap-5">
         <p
           ref={invite.ref}
           className={`
-            text-center
-            font-pinyon
-            text-3xl
-            my-5
+            text-2xl font-cormorant font-black tracking-[1px] uppercase mb-0
             transform-gpu
             will-change-transform
             transition-[transform,opacity]
@@ -40,13 +37,30 @@ const TimeLine = () => {
         >
           Trân Trọng Kính Mời
         </p>
-        <p className="text-xl">Quý Gia Đình</p>
-        <div className="border-t-2 border-gray-950"></div>
-      </div>
-      <p
-        className={`
+        <div
+          className={`
+             w-[220px] 
+             my-0 
+             mx-auto
+              transform-gpu
+              will-change-transform
+              transition-[transform,opacity]
+              duration-[5000ms]
+              ease-[cubic-bezier(0.22,1,0.36,1)]
+              origin-center
+              ${invite.show ? "opacity-100 scale-100" : "opacity-0 scale-[0.15]"}
+            `}
+        >
+          <p className="text-4xl font-pinyon tracking-[1px] -mb-2">
+            Quý Gia Đình
+          </p>
+          <div className="border-b-2 border-gray-950"></div>
+        </div>
+        <p
+          className={`
           font-cormorant
-          text-base
+          uppercase
+          text-lg
           mb-0
           transform-gpu
           will-change-transform
@@ -55,10 +69,12 @@ const TimeLine = () => {
           ease-[cubic-bezier(0.22,1,0.36,1)]
           ${invite.show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
         `}
-      >
-        THAM DỰ LỄ CƯỚI BẢO LỘC & THỊ THEL
-      </p>
-      <div className="flex gap-2 py-5 items-center">
+        >
+          Đến dự tiệc cưới thân mật <br /> của gia đình chúng tôi
+        </p>
+      </div>
+
+      <div className="flex gap-2 pt-5 items-center">
         <div className="flex-1 justify-center">
           <img
             src={DSC_5027}
@@ -115,8 +131,8 @@ const TimeLine = () => {
         </div>
       </div>
       <div ref={ceremony.ref}>
-        <div className="font-sans text-center py-5">
-          <p className="text-2xl font-cormorant font-bold tracking-[1px] uppercase mb-1">
+        <div className="font-serif text-center py-5">
+          <p className="text-2xl font-cormorant font-black tracking-[1px] uppercase mb-1">
             Tiệc Mừng Lễ Thành Hôn
           </p>
 
@@ -238,9 +254,9 @@ const TimeLine = () => {
         <div className="flex items-end justify-between">
           <p
             className={`
-            // w-[46%]
+            w-[50%]
             text-5xl
-          text-green-800 
+           text-green-800 
             font-pinyon 
             mb-2
             transform-gpu
