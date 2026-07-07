@@ -10,7 +10,7 @@ const Album = () => {
 
   useEffect(() => {
     fetch(
-      "https://script.google.com/macros/s/AKfycbzXXoRngKmDp8tvwhgGZzy-ai9WAm1WhyIs0tH3xVe_HmZ8v9PaTokmy5ox6yTjbGAn/exec",
+      "https://script.google.com/macros/s/AKfycbwJEONJtojK6BmTgu4433iUtUDv1Ed31X80xtMtalx1wDoF0P1p65T5S77mDyyaBu-S/exec",
     )
       .then((res) => res.json())
       .then((data) => setImages(data));
