@@ -6,8 +6,10 @@ const End = () => {
   const [form] = Form.useForm();
   const [openModal, setOpenModal] = useState(false);
   const [attendValue, setAttendValue] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const onFinish = async (values) => {
+    setLoading(true);
     try {
       const res = await fetch(
         "https://script.google.com/macros/s/AKfycbyB_f3rrXGDhx7HcAWoxeoZ_Bzv3rTh70HYptpuQvVuDniWziG7mYdl_tBu7LFzigO3GA/exec",
@@ -26,7 +28,6 @@ const End = () => {
       const data = await res.json();
 
       if (data.success) {
-        setAttendValue(values.attend);
         setOpenModal(true);
 
         form.resetFields();
@@ -34,9 +35,16 @@ const End = () => {
           top: 0,
           behavior: "smooth",
         });
+        setTimeout(() => {
+          setAttendValue(values.attend);
+          setOpenModal(true);
+        }, 900);
       }
     } catch (err) {
-      alert("Có lỗi xảy ra");
+      console.error(err);
+      alert(err.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -151,10 +159,53 @@ const End = () => {
 
           <button
             type="submit"
-            className="rounded-lg bg-green-800 px-10 py-2 text-base font-bold uppercase text-white 
-              shadow-lg transition hover:bg-green-700 active:scale-95 w-full"
+            disabled={loading}
+            className={`
+    rounded-lg
+    px-10
+    py-2
+    text-base
+    font-bold
+    uppercase
+    text-white
+    shadow-lg
+    transition
+    w-full
+    flex
+    items-center
+    justify-center
+    gap-2
+    ${
+      loading
+        ? "bg-green-600 cursor-not-allowed opacity-70"
+        : "bg-green-800 hover:bg-green-700 active:scale-95"
+    }
+  `}
           >
-            Gửi Lời Chúc
+            {loading && (
+              <svg
+                className="w-5 h-5 animate-spin"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                />
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                />
+              </svg>
+            )}
+
+            {loading ? "Đang gửi..." : "Gửi Lời Chúc"}
           </button>
         </Form>
       </div>

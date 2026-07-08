@@ -5,7 +5,7 @@ import codau from "../assets/images/CODAU.jpg";
 import useInViewOnce from "../hook/useInViewOnce.js";
 
 const Main = () => {
-  const { ref, show } = useInViewOnce(0.4);
+  const { ref, show } = useInViewOnce(0.5);
 
   return (
     <section ref={ref} className="text-center overflow-hidden px-4">
