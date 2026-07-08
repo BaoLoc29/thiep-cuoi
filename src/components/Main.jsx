@@ -9,6 +9,22 @@ const Main = () => {
 
   return (
     <section ref={ref} className="text-center overflow-hidden px-4">
+      <p
+        className={`
+          font-pinyon
+          text-xl
+          tracking-[1px]
+          transform-gpu
+          will-change-transform
+          transition-[opacity,transform]
+          duration-[5000ms]
+          ease-[cubic-bezier(0.22,1,0.36,1)]
+          ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
+        `}
+      >
+        "Hôn nhân là chuyện cả đời, <br></br>
+        Yêu người vừa ý, cưới người mình thương..."
+      </p>
       <div className="relative flex flex-col pb-2">
         {/* box 2 ông bà sui */}
         <div className="w-full flex justify-between">

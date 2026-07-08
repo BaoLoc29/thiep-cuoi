@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import DSC_BOTTOM from "../assets/images/DSC_BOTTOM.jpg";
-
 import { Form, Input, Select, InputNumber, Modal } from "antd";
 
 const End = () => {
@@ -107,7 +106,11 @@ const End = () => {
             <Select
               size="large"
               placeholder="Chọn"
-              popupClassName="custom-select-dropdown"
+              classNames={{
+                popup: {
+                  root: "custom-select-dropdown",
+                },
+              }}
               options={[
                 {
                   value: "Có",
@@ -172,21 +175,21 @@ const End = () => {
 
           {attendValue === "Có" ? (
             <p className="mt-4 text-lg text-gray-600 leading-8">
-              💖 Cảm ơn bạn đã xác nhận tham dự.
+              ❤️ Cảm ơn bạn đã xác nhận tham dự.
               <br />
-              💖 Sự hiện diện của bạn là niềm vui và hạnh phúc của vợ chồng tụi
+              ❤️ Sự hiện diện của bạn là niềm vui và hạnh phúc của vợ chồng tụi
               mình.
               <br />
-              💖 Hẹn gặp bạn vào ngày hôm đó nhé!
+              ❤️ Hẹn gặp bạn vào ngày hôm đó nhé!
             </p>
           ) : (
             <p className="mt-4 text-lg text-gray-600 leading-8">
-              💖 Cảm ơn bạn đã phản hồi.
+              ❤️ Cảm ơn bạn đã phản hồi.
               <br />
-              💖 Dù không thể tham dự nhưng lời chúc phúc của bạn vẫn vô cùng ý
+              ❤️ Dù không thể tham dự nhưng lời chúc phúc của bạn vẫn vô cùng ý
               nghĩa đối với vợ chồng tụi mình.
               <br />
-              💖 Chúc bạn thật nhiều sức khỏe và hạnh phúc bên gia đình.
+              ❤️ Chúc bạn thật nhiều sức khỏe và hạnh phúc bên gia đình.
             </p>
           )}
 
