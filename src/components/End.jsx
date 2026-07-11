@@ -7,42 +7,50 @@ const End = () => {
   const [openModal, setOpenModal] = useState(false);
   const [attendValue, setAttendValue] = useState("");
   const [loading, setLoading] = useState(false);
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get("code");
 
   const onFinish = async (values) => {
     setLoading(true);
     try {
       const res = await fetch(
-        "https://script.google.com/macros/s/AKfycbyB_f3rrXGDhx7HcAWoxeoZ_Bzv3rTh70HYptpuQvVuDniWziG7mYdl_tBu7LFzigO3GA/exec",
+        "https://script.google.com/macros/s/AKfycbwfGuul0bHtpiWtUD7x87cbMERRjsePFTxpdjbDee_xHwzytgkuHYsjxTIGI98ajVpafg/exec",
         {
           method: "POST",
           body: JSON.stringify({
-            fullName: values.fullName,
-            phone: values.phone,
-            message: values.message,
+            code,
+            message: values.message || "",
             attend: values.attend,
             guestCount: values.guestCount,
           }),
         },
       );
 
+      if (!res.ok) {
+        throw new Error("Không thể kết nối máy chủ");
+      }
+
       const data = await res.json();
 
-      if (data.success) {
-        setOpenModal(true);
-
-        form.resetFields();
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-        setTimeout(() => {
-          setAttendValue(values.attend);
-          setOpenModal(true);
-        }, 900);
+      if (!data.success) {
+        throw new Error(data.message);
       }
+
+      form.resetFields();
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
+      setAttendValue(values.attend);
+
+      setTimeout(() => {
+        setOpenModal(true);
+      }, 900);
     } catch (err) {
+      alert("Gửi thất bại, vui lòng thử lại.");
       console.error(err);
-      alert(err.message);
     } finally {
       setLoading(false);
     }
@@ -60,31 +68,12 @@ const End = () => {
         </span>
       </div>
       <div className="max-w-xl mx-auto rounded-3xl bg-white/80 backdrop-blur-md p-6 shadow-xl border border-green-100">
-        <Form form={form} layout="vertical" onFinish={onFinish}>
-          <Form.Item
-            label={
-              <span className="text-base font-semibold">Tên quý khách</span>
-            }
-            name="fullName"
-            rules={[
-              {
-                required: true,
-                message: "Vui lòng nhập tên quý khách",
-              },
-            ]}
-          >
-            <Input size="large" placeholder="Ví dụ: Trần Văn A" />
-          </Form.Item>
-
-          <Form.Item
-            label={
-              <span className="text-base font-semibold">Số điện thoại</span>
-            }
-            name="phone"
-          >
-            <Input size="large" placeholder="09xxxxxxxx" />
-          </Form.Item>
-
+        <Form
+          form={form}
+          layout="vertical"
+          disabled={loading}
+          onFinish={onFinish}
+        >
           <Form.Item
             label={
               <span className="text-base font-semibold">Lời chúc phúc</span>

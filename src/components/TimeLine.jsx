@@ -1,12 +1,12 @@
 import React from "react";
-import DSC_5027 from "../assets/images/DSC_5027.jpg";
+import DSC_5062 from "../assets/images/DSC_5062.jpg";
 import DSC_4821 from "../assets/images/DSC_4821.jpg";
 import DSC_4325 from "../assets/images/DSC_4325.jpg";
 import heart from "../assets/images/heart.png";
 import endpicture from "../assets/images/pic.png";
 import useInViewOnce from "../hook/useInViewOnce.js";
 
-const TimeLine = () => {
+const TimeLine = ({ guestName }) => {
   const invite = useInViewOnce(0.3);
 
   const ceremony = useInViewOnce(0.25);
@@ -20,9 +20,10 @@ const TimeLine = () => {
     [21, 22, 23, 24, 25, 26, 27],
     [28, 29, 30, "", "", "", ""],
   ];
+
   return (
     <section className="text-center flex flex-col justify-center items-center overflow-hidden p-4">
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-4 pb-5 pt-2">
         <p
           ref={invite.ref}
           className={`
@@ -39,20 +40,19 @@ const TimeLine = () => {
         </p>
         <div
           className={`
-             w-[220px] 
-             my-0 
-             mx-auto
-              transform-gpu
-              will-change-transform
-              transition-[transform,opacity]
-              duration-[5000ms]
-              ease-[cubic-bezier(0.22,1,0.36,1)]
-              origin-center
-              ${invite.show ? "opacity-100 scale-100" : "opacity-0 scale-[0.15]"}
-            `}
+            inline-block
+            mx-3
+            transform-gpu
+            will-change-transform
+            transition-[transform,opacity]
+            duration-[5000ms]
+            ease-[cubic-bezier(0.22,1,0.36,1)]
+            origin-center
+            ${invite.show ? "opacity-100 scale-100" : "opacity-0 scale-[0.15]"}
+          `}
         >
-          <p className="text-4xl font-pinyon tracking-[1px] -mb-2">
-            Quý Gia Đình
+          <p className="text-4xl font-pinyon tracking-[1px] -mb-3">
+            {guestName}
           </p>
           <div className="border-b-2 border-gray-950"></div>
         </div>
@@ -74,10 +74,10 @@ const TimeLine = () => {
         </p>
       </div>
 
-      <div className="flex gap-2 pt-5 items-center">
+      <div className="flex gap-2 items-center">
         <div className="flex-1 justify-center">
           <img
-            src={DSC_5027}
+            src={DSC_5062}
             alt="album 1"
             className={`
               w-full
