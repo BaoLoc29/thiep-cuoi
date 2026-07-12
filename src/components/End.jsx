@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import DSC_BOTTOM from "../assets/images/DSC_BOTTOM.jpg";
 import { Form, Input, Select, InputNumber, Modal } from "antd";
 
-const End = () => {
+const End = ({ code }) => {
   const [form] = Form.useForm();
   const [openModal, setOpenModal] = useState(false);
   const [attendValue, setAttendValue] = useState("");
   const [loading, setLoading] = useState(false);
-  const params = new URLSearchParams(window.location.search);
-  const code = params.get("code");
 
   const onFinish = async (values) => {
     setLoading(true);

@@ -129,7 +129,7 @@ function App() {
         <Main />
         <TimeLine guestName={guestName} />
         <Album />
-        <End />
+        <End code={code} />
         <button
           onClick={toggleMusic}
           className="fixed bottom-4 left-4 bg-white shadow-lg p-3 rounded-full text-green-700 text-xl z-999"
