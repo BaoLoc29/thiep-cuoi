@@ -51,7 +51,7 @@ const TimeLine = ({ guestName }) => {
             ${invite.show ? "opacity-100 scale-100" : "opacity-0 scale-[0.15]"}
           `}
         >
-          <p className="text-3xl font-pinyon tracking-[1px] -mb-2">
+          <p className="text-4xl font-pinyon tracking-[1px] -mb-2">
             {guestName}
           </p>
           <div className="border-b-2 border-gray-950"></div>
@@ -154,7 +154,7 @@ const TimeLine = ({ guestName }) => {
               ${ceremony.show ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}
               `}
             >
-              09:30
+              09:00
             </p>
           </div>
           <div className="h-24 w-px bg-gray-400"></div>

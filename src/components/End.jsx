@@ -44,10 +44,10 @@ const End = () => {
       });
 
       setAttendValue(values.attend);
-
-      setTimeout(() => {
-        setOpenModal(true);
-      }, 900);
+      setOpenModal(true);
+      // setTimeout(() => {
+      //   setOpenModal(true);
+      // }, 900);
     } catch (err) {
       alert("Gửi thất bại, vui lòng thử lại.");
       console.error(err);

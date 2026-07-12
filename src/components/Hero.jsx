@@ -90,7 +90,7 @@ function Hero() {
                 ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
               `}
             >
-              09:30 | Thứ Tư
+              09:00 | Thứ Tư
             </p>
 
             <p

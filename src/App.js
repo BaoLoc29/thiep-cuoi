@@ -4,21 +4,22 @@ import Hero from "./components/Hero";
 import Main from "./components/Main";
 import TimeLine from "./components/TimeLine";
 import { useRef, useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { FaMusic } from "react-icons/fa";
 import "./App.css";
 import InvalidInvite from "./components/InvalidInvite";
 
 function App() {
+  const { code } = useParams();
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const [loading, setLoading] = useState(true);
   const [guestName, setGuestName] = useState("");
+  
   const [invalidType, setInvalidType] = useState("");
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const code = params.get("code");
 
     // Không có code
     if (!code) {
@@ -44,7 +45,7 @@ function App() {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, [code]);
 
   useEffect(() => {
     const autoPlay = async () => {
@@ -121,7 +122,7 @@ function App() {
     <div className="min-h-screen bg-gray-200 flex justify-center">
       {/* AUDIO */}
       <audio ref={audioRef} loop>
-        <source src="/vay-cuoi.mp3" type="audio/mpeg" />
+        <source src="/mpeg.mp3" type="audio/mpeg" />
       </audio>
       <div className="w-full max-w-[420px] bg-white shadow-2xl">
         <Hero />
