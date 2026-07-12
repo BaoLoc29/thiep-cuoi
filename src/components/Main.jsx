@@ -71,7 +71,7 @@ const Main = () => {
           </div>
         </div>
 
-        <div className="relative flex justify-center h-12">
+        <div className="relative flex justify-center h-20">
           <img
             src={heart}
             alt="heart"
@@ -80,7 +80,7 @@ const Main = () => {
         </div>
 
         {/* box cô dâu & chú rể */}
-        <div className="w-full flex justify-between gap-2">
+        <div className="w-full flex justify-between">
           <div>
             <p className="mb-2 font-cormorant text-xl">ÚT NAM</p>
             <p

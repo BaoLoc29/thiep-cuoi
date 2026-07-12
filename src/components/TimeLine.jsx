@@ -23,11 +23,11 @@ const TimeLine = ({ guestName }) => {
 
   return (
     <section className="text-center flex flex-col justify-center items-center overflow-hidden p-4">
-      <div className="flex flex-col gap-4 pb-5 pt-2">
+      <div className="flex flex-col gap-8 py-4">
         <p
           ref={invite.ref}
           className={`
-            text-2xl font-cormorant font-black tracking-[1px] uppercase mb-0
+            text-2xl font-cormorant tracking-[1px] uppercase mb-0
             transform-gpu
             will-change-transform
             transition-[transform,opacity]
@@ -51,7 +51,7 @@ const TimeLine = ({ guestName }) => {
             ${invite.show ? "opacity-100 scale-100" : "opacity-0 scale-[0.15]"}
           `}
         >
-          <p className="text-4xl font-pinyon tracking-[1px] -mb-3">
+          <p className="text-3xl font-pinyon tracking-[1px] -mb-2">
             {guestName}
           </p>
           <div className="border-b-2 border-gray-950"></div>
@@ -74,7 +74,7 @@ const TimeLine = ({ guestName }) => {
         </p>
       </div>
 
-      <div className="flex gap-2 items-center">
+      <div className="flex gap-2 items-center py-4">
         <div className="flex-1 justify-center">
           <img
             src={DSC_5062}
@@ -254,7 +254,7 @@ const TimeLine = ({ guestName }) => {
         <div className="flex items-end justify-between">
           <p
             className={`
-            w-[50%]
+            // w-[50%]
             text-5xl
            text-green-800 
             font-pinyon 
