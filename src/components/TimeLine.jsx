@@ -1,7 +1,7 @@
 import React from "react";
 import DSC_5062 from "../assets/images/DSC_5062.jpg";
-import DSC_4821 from "../assets/images/DSC_4821.jpg";
-import DSC_4325 from "../assets/images/DSC_4325.jpg";
+import DSC_5109 from "../assets/images/DSC_5109.jpg";
+import DSC_4516 from "../assets/images/DSC_4516.jpg";
 import heart from "../assets/images/heart.png";
 import endpicture from "../assets/images/pic.png";
 import useInViewOnce from "../hook/useInViewOnce.js";
@@ -51,10 +51,10 @@ const TimeLine = ({ guestName }) => {
             ${invite.show ? "opacity-100 scale-100" : "opacity-0 scale-[0.15]"}
           `}
         >
-          <p className="text-4xl font-pinyon tracking-[1px] -mb-2">
+          <p className="text-[32px] font-pinyon tracking-[1px] -mb-2">
             {guestName}
           </p>
-          <div className="border-b-2 border-gray-950"></div>
+          <div className="border-b-2 border-gray-300"></div>
         </div>
         <p
           className={`
@@ -94,7 +94,7 @@ const TimeLine = ({ guestName }) => {
 
         <div className="flex-[1.2] justify-center">
           <img
-            src={DSC_4325}
+            src={DSC_4516}
             alt="album 2"
             className={`
               w-full
@@ -115,7 +115,7 @@ const TimeLine = ({ guestName }) => {
 
         <div className="flex-1 justify-center">
           <img
-            src={DSC_4821}
+            src={DSC_5109}
             alt="album 3"
             className={`
               w-full

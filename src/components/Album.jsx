@@ -45,7 +45,7 @@ const Album = () => {
         </div>
       </div>
       <PhotoProvider>
-        <div className="bg-green-100 grid grid-cols-2 gap-3 p-3">
+        <div className="bg-gray-100 grid grid-cols-2 gap-3 p-3">
           {[...images]
             .sort((a, b) => a.name.localeCompare(b.name))
             .map((img, index) => (
