@@ -1,7 +1,7 @@
 import React from "react";
 import DSC_5062 from "../assets/images/DSC_5062.jpg";
 import DSC_5109 from "../assets/images/DSC_5109.jpg";
-import DSC_4516 from "../assets/images/DSC_4516.jpg";
+import DSC_BOTTOM from "../assets/images/DSC_BOTTOM.jpg";
 import heart from "../assets/images/heart.png";
 import endpicture from "../assets/images/pic.png";
 import useInViewOnce from "../hook/useInViewOnce.js";
@@ -94,7 +94,7 @@ const TimeLine = ({ guestName }) => {
 
         <div className="flex-[1.2] justify-center">
           <img
-            src={DSC_4516}
+            src={DSC_BOTTOM}
             alt="album 2"
             className={`
               w-full
