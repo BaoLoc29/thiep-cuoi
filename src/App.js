@@ -20,7 +20,6 @@ function App() {
   const [invalidType, setInvalidType] = useState("");
 
   useEffect(() => {
-
     // Không có code
     if (!code) {
       setInvalidType("missing");
@@ -28,18 +27,28 @@ function App() {
       return;
     }
 
-    fetch(
-      `https://script.google.com/macros/s/AKfycbxxO4aJYSgNkxBtj7eRDTrNJ0dyCkDRDhF4oVvNrspNfvlzDKniEczVmiIc7X7vkz-OQA/exec?code=${code}`,
-    )
-      .then((res) => res.json())
+    const API_URL =
+      "https://script.google.com/macros/s/AKfycbwfGuul0bHtpiWtUD7x87cbMERRjsePFTxpdjbDee_xHwzytgkuHYsjxTIGI98ajVpafg/exec";
+
+    fetch(`${API_URL}?code=${encodeURIComponent(code)}`)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("API request failed");
+        }
+
+        return res.json();
+      })
       .then((data) => {
+        console.log("API response:", data);
+
         if (data.success) {
-          setGuestName(data.guestName);
+          setGuestName(data.guestName || "");
         } else {
           setInvalidType("invalid");
         }
       })
-      .catch(() => {
+      .catch((error) => {
+        console.error("Lỗi lấy thông tin khách:", error);
         setInvalidType("invalid");
       })
       .finally(() => {
