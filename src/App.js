@@ -29,7 +29,7 @@ function App() {
     }
 
     fetch(
-      `https://script.google.com/macros/s/AKfycbwfGuul0bHtpiWtUD7x87cbMERRjsePFTxpdjbDee_xHwzytgkuHYsjxTIGI98ajVpafg/exec?code=${code}`,
+      `https://script.google.com/macros/s/AKfycbxFGw8gPb8LbjVp7XBAcAuXWyU087QbuZxAAdLdDw5GQn64H5gBd1p8TJnGp0zszWywgA/exec?code=${code}`,
     )
       .then((res) => res.json())
       .then((data) => {
