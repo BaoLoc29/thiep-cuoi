@@ -16,7 +16,7 @@ function App() {
 
   const [loading, setLoading] = useState(true);
   const [guestName, setGuestName] = useState("");
-  
+
   const [invalidType, setInvalidType] = useState("");
 
   useEffect(() => {
@@ -29,7 +29,7 @@ function App() {
     }
 
     fetch(
-      `https://script.google.com/macros/s/AKfycbzjurbuqo31ztGOrXXB-CrMnzbZjghSxH_ck9ejIkHMqJFlnaS68mgcIaMXeFZeqAo-NA/exec?code=${code}`,
+      `https://script.google.com/macros/s/AKfycbzfSQEjWVs1N_2tIv9U1jPZ6Ic6eZ8cBj-xby5IJ8y_RoSKNtESHmmONJ9d81UU1M_ytA/exec?code=${code}`,
     )
       .then((res) => res.json())
       .then((data) => {
@@ -54,7 +54,7 @@ function App() {
       try {
         await audioRef.current.play();
         setIsPlaying(true);
-      } catch {}
+      } catch { }
 
       window.removeEventListener("click", autoPlay);
       window.removeEventListener("touchstart", autoPlay);
