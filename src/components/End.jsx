@@ -12,7 +12,7 @@ const End = ({ code }) => {
     setLoading(true);
     try {
       const res = await fetch(
-        "https://script.google.com/macros/s/AKfycbwfGuul0bHtpiWtUD7x87cbMERRjsePFTxpdjbDee_xHwzytgkuHYsjxTIGI98ajVpafg/exec",
+        "https://script.google.com/macros/s/AKfycbzjurbuqo31ztGOrXXB-CrMnzbZjghSxH_ck9ejIkHMqJFlnaS68mgcIaMXeFZeqAo-NA/exec",
         {
           method: "POST",
           body: JSON.stringify({
