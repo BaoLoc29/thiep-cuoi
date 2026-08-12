@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import DSC_TOP from "../assets/images/DSC_TOP.jpg";
+import DSC_TOP from "../assets/images/DSC_TOP.webp";
 
 function Hero() {
   const [animate, setAnimate] = useState(false);

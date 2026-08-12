@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DSC_BOTTOM from "../assets/images/DSC_BOTTOM.jpg";
+import DSC_BOTTOM from "../assets/images/DSC_BOTTOM.webp";
 import { Form, Input, Select, InputNumber, Modal } from "antd";
 
 const End = ({ code }) => {

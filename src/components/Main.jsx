@@ -1,7 +1,7 @@
 import React from "react";
 import heart from "../assets/images/heart.png";
-import chure from "../assets/images/CHURE.jpg";
-import codau from "../assets/images/CODAU.jpg";
+import chure from "../assets/images/CHURE.webp";
+import codau from "../assets/images/CODAU.webp";
 import useInViewOnce from "../hook/useInViewOnce.js";
 
 const Main = () => {
