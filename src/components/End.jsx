@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import DSC_BOTTOM from "../assets/images/DSC_BOTTOM.webp";
 import { Form, Input, Select, InputNumber, Modal } from "antd";
 
 const End = ({ code }) => {
@@ -241,7 +240,11 @@ const End = ({ code }) => {
       </Modal>
 
       <div className="relative overflow-hidden mt-6">
-        <img src={DSC_BOTTOM} alt="chú rể" className="w-full h-auto block" />
+        <img
+          src="https://res.cloudinary.com/dnmv7dodn/image/upload/v1787389564/DSC_BOTTOM.webp"
+          alt="chú rể"
+          className="w-full h-auto block"
+        />
 
         <div
           className="

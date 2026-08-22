@@ -1,4 +1,3 @@
-import album from "../assets/images/album.png";
 import React, { useState, useEffect } from "react";
 import useInViewOnce from "../hook/useInViewOnce.js";
 import { PhotoProvider, PhotoView } from "react-photo-view";
@@ -38,7 +37,7 @@ const Album = () => {
         </p>
         <div className="w-1/2 h-28 overflow-hidden relative">
           <img
-            src={album}
+            src="https://res.cloudinary.com/dnmv7dodn/image/upload/v1787389875/album.png"
             alt="Album"
             className="absolute inset-0 w-[460px] h-full max-w-none object-cover object-center"
           />

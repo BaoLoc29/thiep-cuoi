@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import DSC_TOP from "../assets/images/DSC_TOP.webp";
 
 function Hero() {
   const [animate, setAnimate] = useState(false);
@@ -15,7 +14,11 @@ function Hero() {
   return (
     <section className="relative overflow-hidden">
       {/* Ảnh */}
-      <img src={DSC_TOP} alt="Ảnh cưới" className="w-full h-auto block" />
+      <img
+        src="https://res.cloudinary.com/dnmv7dodn/image/upload/v1787389561/DSC_TOP.webp"
+        alt="Ảnh cưới"
+        className="w-full h-auto block"
+      />
 
       {/* Gradient trắng */}
       <div

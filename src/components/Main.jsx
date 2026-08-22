@@ -1,7 +1,4 @@
 import React from "react";
-import heart from "../assets/images/heart.png";
-import chure from "../assets/images/CHURE.webp";
-import codau from "../assets/images/CODAU.webp";
 import useInViewOnce from "../hook/useInViewOnce.js";
 
 const Main = () => {
@@ -73,7 +70,7 @@ const Main = () => {
 
         <div className="relative flex justify-center h-20">
           <img
-            src={heart}
+            src="https://res.cloudinary.com/dnmv7dodn/image/upload/v1787389875/heart.png"
             alt="heart"
             className="absolute -top-4 w-36 animate-heartbeat"
           />
@@ -122,7 +119,7 @@ const Main = () => {
       <div className="flex bg-gray-100 gap-3 p-3">
         <div className="flex justify-center w-1/2">
           <img
-            src={chure}
+            src="https://res.cloudinary.com/dnmv7dodn/image/upload/v1787389559/CHURE.webp"
             alt="chú rể"
             className={`
               w-full
@@ -139,7 +136,7 @@ const Main = () => {
 
         <div className="flex justify-center w-1/2">
           <img
-            src={codau}
+            src="https://res.cloudinary.com/dnmv7dodn/image/upload/v1787389561/CODAU.webp"
             alt="codau"
             className={`
               w-full

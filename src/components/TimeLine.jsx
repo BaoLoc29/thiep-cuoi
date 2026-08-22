@@ -1,9 +1,4 @@
 import React from "react";
-import DSC_5062 from "../assets/images/DSC_5062.webp";
-import DSC_5109 from "../assets/images/DSC_5109.webp";
-import DSC_BOTTOM from "../assets/images/DSC_BOTTOM.webp";
-import heart from "../assets/images/heart.png";
-import endpicture from "../assets/images/pic.png";
 import useInViewOnce from "../hook/useInViewOnce.js";
 
 const TimeLine = ({ guestName }) => {
@@ -77,7 +72,7 @@ const TimeLine = ({ guestName }) => {
       <div className="flex gap-2 items-center py-4">
         <div className="flex-1 justify-center">
           <img
-            src={DSC_5062}
+            src="https://res.cloudinary.com/dnmv7dodn/image/upload/v1787389561/DSC_5062.webp"
             alt="album 1"
             className={`
               w-full
@@ -94,7 +89,7 @@ const TimeLine = ({ guestName }) => {
 
         <div className="flex-[1.2] justify-center">
           <img
-            src={DSC_BOTTOM}
+            src="https://res.cloudinary.com/dnmv7dodn/image/upload/v1787389564/DSC_BOTTOM.webp"
             alt="album 2"
             className={`
               w-full
@@ -115,7 +110,7 @@ const TimeLine = ({ guestName }) => {
 
         <div className="flex-1 justify-center">
           <img
-            src={DSC_5109}
+            src="https://res.cloudinary.com/dnmv7dodn/image/upload/v1787389561/DSC_5109.webp"
             alt="album 3"
             className={`
               w-full
@@ -300,7 +295,7 @@ const TimeLine = ({ guestName }) => {
                     {day === 2 ? (
                       <>
                         <img
-                          src={heart}
+                          src="https://res.cloudinary.com/dnmv7dodn/image/upload/v1787389875/heart.png"
                           alt="Heart"
                           className={`
                             absolute
@@ -341,8 +336,8 @@ const TimeLine = ({ guestName }) => {
       </div>
       <div>
         <img
-          src={endpicture}
-          alt=""
+          src="https://res.cloudinary.com/dnmv7dodn/image/upload/v1787389875/pic.png"
+          alt="pic"
           className={`
             w-full 
             h-auto
